@@ -40,17 +40,18 @@ main {
 
     .inner-container1, .inner-container3, .inner-container4, .inner-container8, .inner-container9 {
         width: 100%;
-        float:none;
-        clear: both;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
         margin: 0;
         padding: 20px;
-        height:auto;
     }
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
         width: 340px;
         position:relative;
-        left: -300px;
         
     }
 
