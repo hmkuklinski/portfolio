@@ -62,6 +62,10 @@ main {
         margin-top: 150px;
     }
 
+    .hackathons-title {
+        margin: 100px 0px;
+    }
+
     .inner-container8 .project-preview, .inner-container9 .project-preview {
         width: 340px;
         
