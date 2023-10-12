@@ -56,16 +56,12 @@ main {
         margin-bottom: 100px;
     }
     .about-me {
-        margin-bottom: 150px;
+        margin-bottom: 350px;
         padding-bottom: 80px;
     }
 
     .hackathons {
         margin-top: 150px;
-    }
-
-    .hackathons-title {
-        margin-top: 100px;
     }
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
