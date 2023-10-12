@@ -52,7 +52,9 @@ main {
         margin: 0;
         padding: 20px;
     }
-
+    .inner-container1 {
+        margin-bottom: 100px;
+    }
     .about-me {
         margin-bottom: 150px;
         padding-bottom: 80px;
@@ -63,7 +65,7 @@ main {
     }
 
     .hackathons-title {
-        margin: 100px 0px;
+        margin-top: 100px;
     }
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
