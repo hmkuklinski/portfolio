@@ -20,7 +20,7 @@ main {
         font-size: 20px;
         margin: 0px;
     }
-    .inner-container2{
+    .inner-container2, .inner-container1 h2{
         display:none;
     }
     .header {
@@ -76,7 +76,7 @@ main {
         margin-top: 150px;
     }
     .about-me p {
-        font-size:20px;
+        font-size: 24px;
         text-align:center;
     }
 
