@@ -13,12 +13,12 @@ main {
 /*will change to one column if window is too small to support*/
 @media all and (max-width: 1000px) {
     main {flex-flow:column;}
-    main > section, main > nav, main > aside {order:0; width:auto;}
     body {
         flex-flow:column;
         height:auto;
         width:100%;
         font-size: 20px;
+        margin: 0px;
     }
     .inner-container2{
         display:none;
@@ -47,6 +47,7 @@ main {
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
         width: 340px;
+        left: 0px;
     }
 
     .title-bar h2 {
