@@ -28,6 +28,7 @@ main {
         flex-direction: column;
         height:auto;
         width:100%;
+        margin: 0px;
     }
     p, h2, li {
         text-align:center;
@@ -47,7 +48,9 @@ main {
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
         width: 340px;
-        left: -200px;
+        position:relative;
+        left: -70px;
+        
     }
 
     .title-bar h2 {
