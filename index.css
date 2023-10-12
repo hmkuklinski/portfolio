@@ -20,28 +20,11 @@ main {
         font-size: 20px;
         margin: 0px;
     }
-    .about-me{
-        display:none;
+    
+    #hackathons-tb{
+        margin-top: 150px;
     }
-
-    .about-me-mobile {
-        margin-top: 250px;
-        background-image: url("https://www.pitt.edu/sites/default/files/styles/article_full_width_hero/public/2023-06/114136-juneteenth-graphics_rootedincommunity_hero_1440x700.jpg?h=2bdf0f0c&itok=KxO7huqr");
-        background-size:cover;
-        background-repeat:none;
-        background-color: rgba(255, 255, 255, 0.4);
-        background-blend-mode: lighten;
-        font-weight: 650;
-        color:black;
-        padding: 10px;
-        width: 100%;
-        height: auto;
-        margin-right: 30px;
-        margin-bottom: 100px;
-    }
-    .about-me-mobile p{
-        padding: 40px;
-    }
+    
     .inner-container2,.coding-languages, .inner-container1 h2{
         display:none;
     }
@@ -90,11 +73,11 @@ main {
         margin-top: 150px;
     }
     .about-me p {
-        font-size: 20px;
+        font-size: 25px;
         text-align:center;
         padding:10px;
     }
-
+    
 
 
     
@@ -102,10 +85,6 @@ main {
     
 
 
-}
-
-.about-me-mobile{
-    display:none;
 }
 
 .header {
@@ -188,11 +167,14 @@ body {
 
 /*general formatting for the sections*/
 .about-me{
+    display:block;
     margin-top: 130px;
     height: 500px;
     padding: 20px;
     margin-bottom: 140px;
+    
 }
+
 
 
 /*for the about-me section: the container itself, text/header element formatting*/
@@ -200,6 +182,7 @@ body {
     width: 50%;
     padding: 20px;
     font-size: 30px;
+
 }
 
 
