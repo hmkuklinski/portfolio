@@ -18,26 +18,40 @@ main {
         flex-flow:column;
         height:auto;
         width:100%;
+        font-size: 20px;
     }
     .inner-container2{
         display:none;
     }
     .container {
-        display:column;
+        display:flex;
+        flex-direction: column;
         height:auto;
         width:100%;
     }
-    .inner-container3 {
-        display: flex;
-        flex-direction:column;
-        height:auto;
-    }
-    .about-me p {
+    p, h2, li {
         text-align:left;
+        font-size: 20px;
     }
     marquee {
         display:none;
     }
+
+    .inner-container1, .inner-container3, .inner-container4, .inner-container8, .inner-container9 {
+        width: 100%;
+        float:none;
+        clear: both;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .inner-container8 .project-preview, .inner-container9 .project-preview {
+        width: 340px;
+    }
+
+
+
+    
 
     
 
@@ -268,6 +282,10 @@ p {
 /*picture of project created*/
 .preview {
     margin: 0px 20px;
+}
+
+.preview img {
+    width: 100%;
 }
 
 /*pitt challenge*/
