@@ -47,7 +47,7 @@ main {
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
         width: 340px;
-        left: 0px;
+        left: -200px;
     }
 
     .title-bar h2 {
