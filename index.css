@@ -77,6 +77,14 @@ main {
         text-align:center;
         padding:10px;
     }
+
+    .about-me {
+        margin-bottom: 250px;
+    }
+
+    .hackathons {
+        margin-top: 100px;
+    }
     
 
 
