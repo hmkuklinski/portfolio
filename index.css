@@ -20,7 +20,29 @@ main {
         font-size: 20px;
         margin: 0px;
     }
-    .inner-container2, .inner-container1 h2{
+    .about-me{
+        display:none;
+    }
+
+    .about-me-mobile {
+        margin-top: 250px;
+        background-image: url("https://www.pitt.edu/sites/default/files/styles/article_full_width_hero/public/2023-06/114136-juneteenth-graphics_rootedincommunity_hero_1440x700.jpg?h=2bdf0f0c&itok=KxO7huqr");
+        background-size:cover;
+        background-repeat:none;
+        background-color: rgba(255, 255, 255, 0.4);
+        background-blend-mode: lighten;
+        font-weight: 650;
+        color:black;
+        padding: 10px;
+        width: 100%;
+        height: auto;
+        margin-right: 30px;
+        margin-bottom: 100px;
+    }
+    .about-me-mobile p{
+        padding: 40px;
+    }
+    .inner-container2,.coding-languages, .inner-container1 h2{
         display:none;
     }
     .header {
@@ -30,20 +52,17 @@ main {
     .container {
         display:flex;
         flex-direction: column;
-        height:auto;
         width:100%;
         margin: 0px;
         height:auto;
+        padding: 0;
     }
     p, h2, li {
         text-align:center;
         font-size: 20px;
     }
-    marquee {
-        display:none;
-    }
 
-    .inner-container1, .inner-container3, .inner-container4, .inner-container8, .inner-container9 {
+     .inner-container3, .inner-container4, .inner-container8, .inner-container9 {
         width: 100%;
         display:flex;
         flex-direction: column;
@@ -53,24 +72,11 @@ main {
         margin: 0;
         padding: 20px;
     }
-    .inner-container1 {
-        margin-bottom: 100px;
-    }
-    .about-me {
-        margin-bottom: 350px;
-        padding-bottom: 80px;
-        height: auto;
-        width: 100%;
-    }
+
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
         width: 340px;
         
-    }
-
-    .about-me-title{
-        height:auto;
-        width: 100%;
     }
 
     .title-bar h2 {
@@ -84,8 +90,9 @@ main {
         margin-top: 150px;
     }
     .about-me p {
-        font-size: 24px;
+        font-size: 20px;
         text-align:center;
+        padding:10px;
     }
 
 
@@ -97,7 +104,9 @@ main {
 
 }
 
-
+.about-me-mobile{
+    display:none;
+}
 
 .header {
     position:fixed;
@@ -173,7 +182,7 @@ body {
     display:flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 
