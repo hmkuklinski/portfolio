@@ -55,6 +55,11 @@ main {
 
     .about-me {
         margin-bottom: 150px;
+        padding-bottom: 80px;
+    }
+
+    .hackathons {
+        margin-top: 150px;
     }
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
