@@ -4,11 +4,9 @@
     text-align:center;
 }
 
-
 main {
     width: 90%;
 }
-
 
 /*will change to one column if window is too small to support*/
 @media all and (max-width: 1000px) {
@@ -56,10 +54,8 @@ main {
         padding: 20px;
     }
 
-
     .inner-container8 .project-preview, .inner-container9 .project-preview {
-        width: 340px;
-        
+        width: 340px;  
     }
 
     .title-bar h2 {
@@ -85,14 +81,6 @@ main {
     .hackathons {
         margin-top: 100px;
     }
-    
-
-
-    
-
-    
-
-
 }
 
 .header {
@@ -106,17 +94,8 @@ main {
     justify-content: space-between;
     align-items:center;
     z-index: 100;
-
-
 }
-
-
-
-
-
-/*The Navigation Code*/
-
-
+/* ------ The Navigation Code ------*/
 .navbar a {
     position:relative;
     font-size: 22px;
@@ -124,11 +103,7 @@ main {
     font-weight: 500;
     text-decoration:none;
     margin-left: 40px;
-
-
 }
-
-
 .navbar a::before {
     content: '';
     position: absolute;
@@ -138,89 +113,59 @@ main {
     height: 2px;
     background-color:skyblue;
     transition: 0.3s;
-
-
 }
-
-
 .navbar a:hover::before {
     width: 100%;
 }
-
-
 .navbar a:active {
     color:skyblue;
     transition: 0.3s all ease-in;
 }
-
-
-/*main content*/
-
-
+/* ------ main content ------*/
 body {
     margin: 20px;
     display:flex;
     justify-content: center;
 }
-
-
-/*holds the content*/
+/* ------ holds the content ------*/
 .container {
     display:flex;
     align-items: center;
     justify-content: space-evenly;
     margin-top: 50px;
 }
-
-
-/*general formatting for the sections*/
+/* ------general formatting for the sections ------*/
 .about-me{
     display:block;
     margin-top: 130px;
     height: 500px;
     padding: 20px;
-    margin-bottom: 140px;
-    
+    margin-bottom: 140px;  
 }
-
-
-
-/*for the about-me section: the container itself, text/header element formatting*/
+/* ------ for the about-me section: the container itself, text/header element formatting ------*/
 .inner-container1 {
     width: 50%;
     padding: 20px;
     font-size: 30px;
-
 }
-
-
 .inner-container1 p, h2 {
-    padding: 10px;
-    
+    padding: 10px;   
 }
-
-
 p {
     font-size: 26px;
 }
-
-
 .inner-container1 h2 {
     font-size: 50px;
 }
-
 .profile-picture {
     border-radius: 50%;
     padding: 20px;
     margin-top: 30px;
 }
-
-
 /*marquee formatting additional*/
 .coding-languages img {
     margin-right: 50px; /*spaces out the different coding icons in the marquee*/
 }
-
 /*------ hackathon section!!! ------*/
 .hackathons {
     height: auto;
@@ -233,11 +178,9 @@ p {
     padding: 20px;
     height: auto;
     margin: 0 20px;
-    font-size: 30px;
-    
+    font-size: 30px;   
 }
-
-/*bullet point formatting: pitt challenge: can change to just li if I want to use other list elements later...*/
+/* ------ bullet point formatting: pitt challenge section ------*/
 .inner-container3 li{
     font-size:25px;
     text-align:left;
@@ -245,30 +188,19 @@ p {
     margin-left: 0;
     padding-left: 0;
 }
-
-
-
 .pgh-title {
     padding: 10px 0px;
 }
-
-
 .pgh-title p{
     font-size: 18px;
 }
-
-
 .text {
     margin: 10px;
     font-size: 20px;
     padding: 20px 10px 10px 10px;
     text-align: left;
 }
-
-
-
-
-/*harvard hacks*/
+/* ------ harvard hacks ------*/
 .inner-container4{
     width: 50%;
     padding: 20px;
@@ -276,101 +208,58 @@ p {
     height: auto;
     margin:20px;
 }
-
-
 .hvd-title {
     padding: 10px 0px;
 }
-
-
 .hvd-title p{
     font-size: 18px;
 }
-
-
-/*------ formatting for the dividers -------*/
-
+/* ------ pitt challenge ------*/
+.pgh-title {
+    padding: 10px 0px;
+}
+.pgh-title p{
+    font-style: italic;
+    font-size: 18px;
+}
+.text {
+    margin: 10px;
+    font-size: 18px;
+    padding: 20px;
+}
+.clubs {
+    margin-bottom: 150px;
+    padding: 20px;   
+}
+/* ------ formatting for the dividers -------*/
 .title-bar {
     margin-top: 15px;
     color: black;
     border: 1px solid black;
 }
-
 .title-bar h2 {
     font-size: 45px;
 }
-
-/* section titles*/
+/* ------ section titles ------*/
 .hackathons-title, .clubs-title, .projects-title {
     font-size: 36px;
     margin-bottom: 0px;
 }
-
+/* ------ Project Containers ------ */
 .inner-container8, .inner-container9 {
     width: 50%;
     font-size: 30px; 
     height: auto;
     margin: 0px 20px;
 } 
-
-
 .inner-container8 p, .inner-container9 p{
     font-size: 30px;
 }
-
-/*picture of project created*/
-.preview {
-    margin: 0px 20px;
-}
-
-.preview img {
-    width: 100%;
-}
-
-/*pitt challenge*/
-.pgh-title {
-    padding: 10px 0px;
-}
-
-.pgh-title p{
-    font-style: italic;
-    font-size: 18px;
-}
-
-.text {
-    margin: 10px;
-    font-size: 18px;
-    padding: 20px;
-}
-
-/*harvard hacks*/
-.inner-container4{
-    width: 50%;
-    padding: 20px;
-    font-size: 30px;
-    height: auto;
-    margin:20px;
-}
-
-
-.hvd-title {
-    padding: 10px 0px;
-}
-
-.hvd-title p{
-    font-style: italic;
-    font-size: 18px;
-}
-.clubs {
-    margin-bottom: 150px;
-    padding: 20px;
-    
-}
+/* ------ Projects ------ */
 .projects {
     margin-bottom: 150px;
     padding: 20px;
 }
-
 .project-links {
     display:flex;
     flex-direction: row;
@@ -379,12 +268,18 @@ p {
     padding: 10px;
     margin-top: 20px;
 }
-
 .github-icon {
-    border-radius: 30%;
-    
+    border-radius: 30%;  
+}
+/* ------ picture of project created ------*/
+.preview {
+    margin: 0px 20px;
+}
+.preview img {
+    width: 100%;
 }
 
+/* ------ Button formatting ------ */
 .button {
     background-color:#003594;
     color:whitesmoke;
