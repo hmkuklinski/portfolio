@@ -68,6 +68,11 @@ main {
         
     }
 
+    .about-me-title{
+        height:auto;
+        width: 100%;
+    }
+
     .title-bar h2 {
         font-size: 20px;
         text-align:center;
