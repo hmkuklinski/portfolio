@@ -25,6 +25,7 @@ main {
     }
     .header {
         width: 80%;
+        height:auto;
     }
     .container {
         display:flex;
@@ -56,10 +57,9 @@ main {
         margin-bottom: 100px;
     }
     .about-me {
-        margin-top: 0px;
         margin-bottom: 350px;
         padding-bottom: 80px;
-        height: 400px;
+        height: auto;
         width: 100%;
     }
 
