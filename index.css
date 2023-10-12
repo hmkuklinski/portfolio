@@ -23,6 +23,10 @@ main {
     .inner-container2{
         display:none;
     }
+    .header {
+        width: 100%;
+        height:auto;
+    }
     .container {
         display:flex;
         flex-direction: column;
