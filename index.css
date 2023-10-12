@@ -44,6 +44,7 @@ main {
         clear: both;
         margin: 0;
         padding: 20px;
+        height:auto;
     }
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
