@@ -393,6 +393,18 @@ p {
     border-radius: 8px;
     text-align:center;
     display:inline-block;
-    border: 1px solid black;
     margin: 20px 10px;
+    text-decoration:none;
 }
+
+.button:hover {
+    transition: all 0.5s;
+   padding: 15px 65px;
+
+}
+
+.button.live-preview {
+    background-color:rgb(0, 172, 240);
+    color:whitesmoke;
+}
+
