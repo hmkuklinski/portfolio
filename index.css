@@ -24,7 +24,7 @@ main {
         display:none;
     }
     .header {
-        width: 100%;
+        width: 90%;
         height:auto;
     }
     .container {
@@ -33,6 +33,7 @@ main {
         height:auto;
         width:100%;
         margin: 0px;
+        height:auto;
     }
     p, h2, li {
         text-align:center;
