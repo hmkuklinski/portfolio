@@ -30,7 +30,7 @@ main {
         width:100%;
     }
     p, h2, li {
-        text-align:left;
+        text-align:center;
         font-size: 20px;
     }
     marquee {
@@ -47,6 +47,20 @@ main {
 
     .inner-container8 .project-preview, .inner-container9 .project-preview {
         width: 340px;
+    }
+
+    .title-bar h2 {
+        font-size: 20px;
+        text-align:center;
+        color: #FFB81C; /*H2P*/
+        text-decoration: underline solid #FFB81C; 
+    }
+    .title-bar {
+        background-color: #003594;
+    }
+    .about-me p {
+        font-size:20px;
+        text-align:center;
     }
 
 
