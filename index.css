@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@font-face{
+    font-family: 'Amsterdam';
+    src:url('https://www.fontspace.com/amsterdam-font-f29770')
+}
 *{
     box-sizing:border-box;
     margin:0px;
@@ -83,12 +88,54 @@ main {
     }
 }
 
+.main-landing{
+    background: url(https://www.pitt.edu/sites/default/files/styles/tier_one_hero/public/2021-07/mission-t1-cl-top-aerial.jpg?h=2c66ef4f&itok=YlGwAwOr);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 450px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-landing-container {
+    background-color: rgba(216, 227, 243, 0.75);
+    display:block;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 80px;
+    width: 40%;
+    height: auto;
+    border-radius: 16px;
+    padding: 10px 30px;
+}
+.main-landing-container:hover{
+    background-color: rgba(216, 227, 243, 1);
+}
+.main-landing-container p {
+    font-size: 20px;
+    color: black;
+}
+
+h1, h2, h3{
+    font-family: "poppins",sans-serif;
+}
+
+h1 {
+    font-size: 38px;
+    color: blue;
+}
+
+
 .header {
     position:fixed;
     top:0;
     left:0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px;
     background: white;
     display:flex;
     justify-content: space-between;
@@ -137,7 +184,7 @@ body {
 /* ------general formatting for the sections ------*/
 .about-me{
     display:block;
-    margin-top: 130px;
+    margin-top: 20px;
     height: 500px;
     padding: 20px;
     margin-bottom: 140px;  
@@ -155,14 +202,14 @@ p {
     font-size: 26px;
 }
 .inner-container1 h2 {
-    font-size: 50px;
+    font-size: 60px;
 }
 .profile-picture {
     border-radius: 50%;
     padding: 20px;
     margin-top: 30px;
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
 }
 /*marquee formatting additional*/
 .coding-languages img {
@@ -212,9 +259,11 @@ p {
 }
 .hvd-title {
     padding: 10px 0px;
+    
 }
 .hvd-title p{
     font-size: 18px;
+    font-style:italic;
 }
 /* ------ pitt challenge ------*/
 .pgh-title {
@@ -260,7 +309,8 @@ p {
 /* ------ Projects ------ */
 .projects {
     margin-bottom: 150px;
-    padding: 20px;
+    padding-left: 20px;
+    flex-wrap:wrap;
 }
 .project-links {
     display:flex;
@@ -297,7 +347,13 @@ p {
 .button:hover {
     transition: all 0.5s;
    padding: 15px 65px;
+}
 
+.main-landing-container > .button:hover{
+    padding: 15px 50px;
+    background-color:#FFB81C;
+    transition: all 0.5s;
+    
 }
 
 .button.live-preview {
@@ -308,6 +364,7 @@ p {
     display:flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .duolingo , .codedex, .discord{
