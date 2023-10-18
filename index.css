@@ -112,9 +112,6 @@ main {
     border-radius: 16px;
     padding: 10px 30px;
 }
-.main-landing-container:hover{
-    background-color: rgba(216, 227, 243, 1);
-}
 .main-landing-container p {
     font-size: 20px;
     color: black;
