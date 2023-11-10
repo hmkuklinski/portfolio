@@ -155,6 +155,7 @@ body {
     justify-content: flex-start;
     margin-top: 50px;
 }
+
 .container::-webkit-scrollbar {
     display:none;
 }
@@ -212,26 +213,33 @@ p {
     margin-right: 50px; /*spaces out the different coding icons in the marquee*/
 }
 /*------ hackathon section!!! ------*/
+
 .hackathons {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     height: auto;
     margin-bottom: 140px;
 }
 
 /*pitt challenge formatting*/
-.inner-container3 {
-    max-width: 50%;
-    padding: 20px;
+.inner-container3, .inner-container8, .inner-container4 {
+    max-width: 100%;
+    padding: 10px;
     height: auto;
-    margin: 0 20px;
+    margin: 0px 20px 50px 0px;
     font-size: 30px;   
 }
 /* ------ bullet point formatting: pitt challenge section ------*/
-.inner-container3 li{
+.inner-container3 li, .inner-container4 li, .inner-container8 li{
     font-size:25px;
     text-align:left;
     list-style: square;
     margin-left: 0;
     padding-left: 0;
+    list-style-type:square;
 }
 .pgh-title {
     padding: 10px 0px;
@@ -246,13 +254,6 @@ p {
     text-align: left;
 }
 /* ------ harvard hacks ------*/
-.inner-container4{
-    width: 50%;
-    padding: 20px;
-    font-size: 30px;
-    height: auto;
-    margin:20px;
-}
 .hvd-title {
     padding: 10px 0px;
     
