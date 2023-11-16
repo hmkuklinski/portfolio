@@ -148,16 +148,9 @@ body {
 /* ------ holds the content ------*/
 .container {
     display:flex;
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    scrollbar-width:none;
-    -ms-overflow-style: none;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     margin-top: 50px;
-}
-
-.container::-webkit-scrollbar {
-    display:none;
 }
 
 .inner-container12, .inner-container13, .inner-container14 {
@@ -225,27 +218,23 @@ p {
 }
 
 /*pitt challenge formatting*/
-.inner-container3, .inner-container8, .inner-container4 {
+.inner-container3 {
     max-width: 100%;
     padding: 10px;
     height: auto;
-    margin: 0px 20px 50px 0px;
+    margin: 20px;
     font-size: 30px;   
+    background-color: rgba(216, 227, 243, 0.75);
+    border-radius:16px;
 }
 /* ------ bullet point formatting: pitt challenge section ------*/
-.inner-container3 li, .inner-container4 li, .inner-container8 li{
+.inner-container3 li{
     font-size:25px;
     text-align:left;
     list-style: square;
     margin-left: 0;
     padding-left: 0;
     list-style-type:square;
-}
-.pgh-title {
-    padding: 10px 0px;
-}
-.pgh-title p{
-    font-size: 18px;
 }
 .text {
     margin: 10px;
@@ -254,21 +243,13 @@ p {
     text-align: left;
 }
 /* ------ harvard hacks ------*/
-.hvd-title {
+.hack-title {
     padding: 10px 0px;
     
 }
-.hvd-title p{
+.hack-title p{
     font-size: 18px;
     font-style:italic;
-}
-/* ------ pitt challenge ------*/
-.pgh-title {
-    padding: 10px 0px;
-}
-.pgh-title p{
-    font-style: italic;
-    font-size: 18px;
 }
 .text {
     margin: 10px;
