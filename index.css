@@ -410,6 +410,7 @@ proper alignment, spacing
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
 }
 .projects-container {
     display:flex;
@@ -487,8 +488,8 @@ proper alignment, spacing
 
 
 
-.known .header{
-    margin: 10px;
+.known{
+    margin-top: 10px;
 }
 
 #search-fail{
