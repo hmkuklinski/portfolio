@@ -101,7 +101,7 @@ ul {
     color: #222;
     position: relative;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding-bottom: 20px;
 }
 .section_title::before{
@@ -379,6 +379,9 @@ proper alignment, spacing
 }
 
 /* ------ ABOUT SECTION ------*/
+#about{
+    margin-top: 40px;
+}
 .about-container {
     align-items: center;
     height: 470px;
