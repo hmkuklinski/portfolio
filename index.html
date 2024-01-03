@@ -1,201 +1,273 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--metadata-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <!--metadata-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title</title>
+        <link rel="stylesheet" href="/Portfolio/portfolio/updated.css">
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+                <a href="" class="logo">
+                    <img src="https://media.discordapp.net/attachments/812752321867153409/1192082466769485986/white_4.jpg?ex=65a7c84f&is=6595534f&hm=c34fa5186628691483d5c8bfd2bd2a58c07c77f1fc56ffb74fa641959847d102&=&format=webp" alt="logo" class="img-fluid">
+                </a>
+                <ul class="navbar">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link active-link"><ion-icon name="home-outline"></ion-icon> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#intro" class="nav-link"><ion-icon name="person-outline"></ion-icon> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects-win" class="nav-link"><ion-icon name="folder-outline"></ion-icon> Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><ion-icon name="document-outline"></ion-icon> Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><ion-icon name="chatbubbles-outline"></ion-icon> Contact</a>
+                    </li>
+                    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </ul> 
+                <ion-icon name="menu-outline" class="toggle-icon"></ion-icon>        
+            </div>
+        </header>
 
-    <!--about the website-->
-    <meta name="author" content="Hannah Kuklinski">
-    <meta name="description" content="This website was created to showcase all of my projects!">
+        <main>
+            <section class="intro section" id="intro">
+                <div class="intro-container container grid">
+                    <div class="intro-content">
+                        <h4>Hello! </h4>
+                        <h1>I'm
+                            <span class="typed" data-typed-items=" Hannah Kuklinski,a CS Major,an Aspiring Developer,a Polyglot, a STAY"></span>
+                        </h1>
+                        <p>I'm a Computer Science student studying at the University of Pittsburgh.
+                            I am currently building a foundational knowledge in Python, Java, HTML, and CSS and I am eager to learn more through real world experiences, applications, and projects.    
+                        </p>
+                        <div class="intro-social">
+                            <a href="https://github.com/hmkuklinski"><ion-icon name="logo-github"></ion-icon></a>
+                            <a href="https://www.linkedin.com/in/hannahkuklinski/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            
+                        </div>
+                        <a href="#contact" class="btn">
+                            Read More
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                        
+                    </div>
+                    <div class="intro-img">
+                        <img src="https://media.discordapp.net/attachments/812752321867153409/1183996375877300364/IMG_9283.jpg?ex=658a5d8d&is=6577e88d&hm=103c7c3136aa922728d96042d3bc69a78b817f37b7390da187c8a256325b8b09&=&format=webp&width=264&height=350" alt="top image" class="img-fluid">
+                    </div>
+                </div>
+            </section>
+            <section class="about-me section"  id="about">
+                <h2 class="section_title">About Me</h2>
+                <div class="about-container container grid">
+                    <div class="about-img">
+                        <img src="https://media.discordapp.net/attachments/812752321867153409/1191980475066110074/IMG_4249_1.jpg?ex=65a76953&is=6594f453&hm=c18df659a537bab989ea628cf91ed05e9ffa5e6b7ad56d2d07b1fce617f85310&=&format=webp" alt="hackharvard">
+                    </div>
+                    <div class="about-text">
+                        <p> 
+                            I've always had a love for learning foreign languages. I started learning Korean by myself because I enjoyed watching Korean drama and variety shows. 
+                            My goal initially was to learn the language so I could understand the lyrics to my favorite songs and be able to read the subtitles. 
+                            I never expected that this hobby would lead me to learn about computer languages and software development.
+                        </p>
+                        <br>
+                        <p>
+                            I decided I would take an introduction to programming with Java class over the summer to see if computer science was something that would interest me.
+                            I loved learning about how programs were structured and also the endless possibilities of applications in the real world.
+                            After this class, I started learning HTML, CSS, JavaScript, and Python. 
+                            I love making projects because they allow me to apply what I've learned and express my creativity. 
+                            It also allows me to improve on my skills! It gives me the ability to see how much I've grown as a developer between edits.    
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="projects section" id="projects-win">
+                <h2 class="section_title">Projects</h2>
+                <div class="project-search">
+                    <div class="textbox">
+                        <input type="text" id="search" placeholder="Search Project by Language or Framework">
+                        <button onclick="filterProjects()" class="search-btn">Search</button>
+                    </div>
+                    <div class="known">
+                        <div class="suggested">
+                            <h4>Suggested: </h4>
+                        </div>
+                        <div class="known-text">
+                            HTML, CSS, JavaScript, Python, Pandas, GeoPandas, Java
+                        </div>
 
-    <!--CSS sheet/other required website imports-->
-    <link rel="stylesheet" href="index.css">
+                    </div>
+                    
+                </div>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <h3>Pomodoro Timer</h3>
+                        <div class="project-preview">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/community%2Ffinal-project%2Fpost%2FgF476udi9G5p5n8leR3S%2FScreenshot%202023-12-27%20085614.png?alt=media&token=2706ac1b-4808-480f-bb3e-203150b8516a" alt="project-preview">
+                        </div>
+                        <div class="project-text">
+                            <p> Created a Pomodoro Timer- with 25 minutes of study time and two different break types. 
+                                Allows for users to add on their own tasks and remove them once they are completed.
+                            </p>
+                        </div>
+                        <div class="project-btn">
+                            <div class="github">
+                                <a href="https://github.com/hmkuklinski/pomodoro"> 
+                                    <img class="github-icon" src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" alt="github icon" height="80px" width="110px">
+                                </a>
+                            </div>
+                            <div class="other">
+                                <a class="btn-preview" href="https://pomodoro-kuklinski.vercel.app/">Live Preview</a>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>PGH's Pedestrian Paradise</h3>
+                        <div class="project-preview">
+                            <img src="https://cdn.discordapp.com/attachments/812752321867153409/1184037100702683176/image.png?ex=658a837b&is=65780e7b&hm=a70899bed21c0b0531010038d38aa14db12a34bf712194358ee2491057deefc8&" alt="project-preview">
+                        </div>
+                        <div class="project-text">
+                            <p>
+                                Utilized Pittsburgh's 311 Report CSV data to determine the safest neighborhood for pedestrians.
+                                <br> 
+                                Created series using Pandas and Python to filter data, 
+                                generated organized data charts, 
+                                displayed information using bar charts and choropleth maps.
+                                
+                            </p>
+                        </div>
+                        <div class="project-btn">
+                            <div class="github">
+                                <a href="https://github.com/Hyperramana8/Final-Project-0010"> 
+                                    <img class="github-icon" src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" alt="github icon" height="80px" width="110px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <ul>
+                                <li>Python</li>
+                                <li>Pandas</li>
+                                <li>GeoPandas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Emoji Showdown</h3>
+                        <div class="project-preview">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/community%2Fproject-showcase%2Fpost%2FOcxUdeH1ZBt1rsV9OxAK%2FScreenshot%202023-11-14%20170402.png?alt=media&token=1a569aa3-97b4-43eb-9d45-d8427798eec3" alt="rps preview">
+                        </div>
+                        <div class="project-text">
+                            <p>A game that allows users to battle with a computer using emojis!</p>
+                        </div>
+                        <div class="project-btn">
+                            <div class="github">
+                                <a href="https://github.com/hmkuklinski/rps"> 
+                                    <img class="github-icon" src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" alt="github icon" height="80px" width="110px">
+                                </a>
+                            </div>
+                            <div class="other">
+                                <a class="btn-preview" href="https://hannahkuklinski-rps.vercel.app/">Play Game</a>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Compostopia</h3>
+                        <div class="project-preview">
+                            <img src="https://media.discordapp.net/attachments/812752321867153409/1172220327988822107/image.png?ex=655f8640&is=654d1140&hm=7bfa75ce2595d9f8733b279cb6a22c3e054d7090974ea88c29601ab59a0d1b86" alt="compostopia">
+                        </div>
+                        <div class="project-text">
+                            <p>
+                                Created an interactive game that allows children to learn about composting and provides valuable resources to get started.
+                                <br>For Pitt's CSC Hackathon 2023
+                            </p>
+                        </div>
+                        <div class="project-btn">
+                            <div class="github">
+                                <a href="https://github.com/hmkuklinski/csc-hackathon"> 
+                                    <img class="github-icon" src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" alt="github icon" height="80px" width="110px">
+                                </a>
+                            </div>
+                            <div class="other">
+                                <a class="btn-preview" href="https://csc-hackathon.vercel.app">Play Game</a>
+                            </div> 
+                        </div>
+                        <div class="project-tags">
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div><!--projects container-->
+                <div class="project-card" id="search-fail">
+                    <h3>In Progress</h3>
+                    <div class="project-preview">
+                        <img src="https://img.freepik.com/premium-vector/woman-programmer-software-web-development-computer-girl-work-script-coding-programming_352905-203.jpg" alt="in progress">
+                    </div>
+                    <div class="project-text">
+                        <p>
+                            This project is in the works. Please check back later!
+                        </p>
+                    </div>
+                </div>
+                
+            </section>
+            <section class="clubs section"  id="club">
+                <h2 class="section_title">Clubs</h2>
+                <div class="clubs-container container grid">
+                    <div class="club-box">
+                        <div class="wics">
+                          <h3>Women in Computer Science Club</h3>
+                        </div>
+                        <div class="picture">
+                          <img src="https://media.licdn.com/dms/image/C4E03AQEOqDKyTN2ISQ/profile-displayphoto-shrink_800_800/0/1617679094045?e=2147483647&v=beta&t=PzFEFv_vTUC4oBztNPgxlaWA0HY_4j6z10vrxDezGLA" width="200px" height="200px" alt ="wics">
+                        </div> 
+                    </div>
+                    <div class="club-box">
+                        <div class="pittcsc">
+                            <h3>Computer Science Club</h3>
+                        </div>
+                        <div class="picture">
+                            <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/nm4rj67y4shmloayo3of" alt="csc picture" class="csc-logo" width="200px" height="200px">
+                        </div>
+                    </div>
+                    <div class="club-box">
+                        <div class="daehwa">
+                          <h3>Daehwa: Korean Conversation club</h3>
+                        </div>
+                        <div class="picture">
+                           <img src="https://se-images.campuslabs.com/clink/images/1fba770b-1870-4bfe-b2a0-40dc5bd6fe2727425fff-3559-4c5b-be9d-99ff3e926afd.png?preset=med-sq" alt="daehwa picture" width="200px" height="200px">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-
-    <title>Hannah Kuklinski's Portfolio</title>
-  </head>
-  <body>
-    <header class="header">
-      <a href="http://hannahkuklinski.vercel.app" class="logo">
-        <img src="https://media.discordapp.net/attachments/812752321867153409/1174794628294258790/banner_sf.jpg?ex=6568e3c2&is=65566ec2&hm=5348c60511983da0ecd6cb6b33a2eb8f72999b4ecfd7a256f61aa2c2d06e9ac0" alt="logo" class="pitt-logo" width="380px" height="150px">
-      </a>
-        <nav class="navbar">  
-          <a href="/">Home</a>
-          <a href="https://github.com/hmkuklinski">GitHub</a>
-          <a href="https://www.linkedin.com/in/hannahkuklinski/">LinkedIn</a>
-          <a href="https://docs.google.com/document/d/e/2PACX-1vRE0rKhdWtMno35T_67vYXDX6T2eUR8PJp7defloQOOK8l-5hw-weKx4WKbDOBgq5jUd8Xj8uJiJk9q/pub">Resume</a>
-          <a href="https://hmkuklinski-projects.vercel.app/">Projects</a>
-        </nav>
-    </header>
-    <main>
-      <div class="main-landing">
-        <div class="main-landing-container">
-          <h1>Hannah Kuklinski</h1>
-          <hr>
-          <h3>Website Portfolio</h3>
-          <p>Welcome to my website! I wanted to create this page in order to display my projects and provide some background information into my skills and experiences.
-            Feel free to look around and let me know if you have any comments, questions, concerns, or suggestions for how I can improve this website. </p>
-          <a class="button" id="contact-btn" href="https://www.linkedin.com/in/hannahkuklinski/">Contact</a>
-     
-        </div>
-      </div>
-      <section class="about-me">
-        <div class="container">
-            <div class="inner-container1">
-              <h2>Hi! I'm Hannah.</h2>
-              <p>I am a freshman Computer Science student at the University of Pittsburgh. I am currently building a foundational knowledge in Python, Java, HTML, and CSS and I am eager to learn more through real world experiences, applications, and projects.
-              <br>
-              <div class="coding-languages">
-                <marquee behavior="scroll" direction="left">
-                  <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png" width="50px" height="50px" alt="html">
-                  <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png" width="50px" height="50px" alt="css">
-                  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" width="50px" height="50px" alt="java">
-                  <img src="https://static-00.iconduck.com/assets.00/python-icon-512x512-48og66bp.png" width="50px" height="50px" alt="python">
-                  <img src="https://repository-images.githubusercontent.com/584068292/2445b500-869d-498e-ae47-2a3e5820e3c5" width="50px" height="50px" alt="javascript">
-                </marquee>
-              </div>
-            </div>
-            <div class="inner-container2">
-              <img src="https://media.discordapp.net/attachments/788167038853840896/1161308885601239102/IMG_9283.png?ex=6537d42e&is=65255f2e&hm=5270041119d92ef91a1c7101485088a15ff459ced663ba663efd1e871cfcc3d2&=&width=264&height=352" alt="my-profile" class="profile-picture">
-            </div>
-        </div>
-      </section>
-      <div class="title-bar" id="hackathons-tb">
-        <h2 class="hackathons-title">Hackathons</h2>
-      </div>
-      <section class="hackathons">
-        <div class="inner-container3">
-          <div class="hack-title">
-            <h3>Pitt Challenge 2023</h3>
-            <p>University of Pittsburgh</p>
-            <p>September 15, 2023 - September 17, 2023</p>
-          </div>
-          <div class="text">
-            <p>Participated in a 36 hour hackathon with a mission of improving the healthcare industry through the use of  technological solutions.</p>
-            <br>
-            <ul>
-              <li>Developed a web application using HTML and CSS to help store information about the project </li>
-              <li>Obtained, edited, sorted, and organized a raw data set of allergen types from an excel sheet to a CSV file in order to utilize the data in a python program </li>
-            </ul>
-          </div> 
-          <a class="button" href="https://github.com/N0taR0b0t/PittChallenge23">View Code Here</a>
-        </div>
-        <div class="inner-container3">
-          <div class="hack-title">
-            <h3>Harvard Hacks 2023</h3>
-            <p>Harvard University</p>
-            <p>October 20, 2023 - October 22, 2023</p>
-          </div>
-          <div class="text">
-            <p>Participated in a 36 hour hackathon with a mission of improving the healthcare industry through the use of  technological solutions.</p>
-            <br>
-            <ul>
-              <li>Learned about how Flask can allow for Python code to be implemented on a HTML/CSS style webpage</li>
-              <li>Collaborated with teammates to solve difficult problems with regards to website formatting and data implementation </li>
-            </ul>
-          </div> 
-          <a class="button" href="https://github.com/sagarthegreat/Burrah">View Code Here</a>
-        </div>
-        <div class="inner-container3">
-          <div class="hack-title">
-            <h3>Pitt CSC Hacks 2023</h3>
-            <p>University of Pittsburgh</p>
-            <p>October 23, 2023- November 8, 2023</p>
-          </div>
-          <div class="text">
-            <p>Created a drag and drop image game that teaches children how to compost.</p>
-            <br>
-            <ul>
-              <li>Utilized HTML and CSS to structure and format the game window and other website elements </li>
-              <li>Utilized Javascript to create an interactive game that allows for drag/drop images, provides game instructions, score keeping, and buttons that change the screen display.</li>
-            </ul>
-          </div>
-          <a class="button" href="https://github.com/hmkuklinski/csc-hackathon">View Code Here</a>
-          <a class="button" href="https://csc-hackathon.vercel.app/">Play Game</a>
-        </div>
-      </section>
-      <div class="title-bar">
-        <h2 class="my-interest">My Interests</h2>
-      </div>
-      <section class="hobbies">
-        <div class="container">
-          <div class="inner-container-a">
-            <p>In my free time, you can often find me in the Starbuck lobby studying a foreign language! In 2019, I started learning Japanese and about two years later, I started learning Korean. Since I was a self taught learner, I often
-              used Korean pop/RNB music as a way to practice my listening skills. I also started watching Korean dramas and Korean variety shows. While it initially started as a method to learn Korean, I now watch Korean dramas and listen to KPOP regularly.
-              I am a STAY, which means I love Stray Kids (my favorite member is Han Jisung). I often use their concerts an excuse to travel across the country and have been to a total of 4 Stray Kids concerts.
-              My favorite genres would have to be action,suspense or thriller. I'd be happy to give any recommendations for Kdramas!
-              <br><br>
-              <p>Some of the languages I am studying right now are: Korean, Japanese, and Mandarin. I would love to have an Asia trip and be able to experience the world by communicating and connecting with others and learning more about their culture!</p>
-              <br>
-              <p>안녕하세요! 저는 해나입니다. 피츠버그 대학생이고 외국어를 배우기 너무 좋아해요. 지금 중국어, 일본어하고 한국어를 공부하고 있습니다. 혼자 공부했으니까 조금 어려운데 열심히 복습하고 연습해서 괜찮습니다.
-                <br>저 제일 좋아하는 KPop 그룹은 스트라이 키즈입니다. 스키즈를 자주 들어서 콘서트를 많이 갔습니다. 
-                <br>만나서 반갑습니다!!
-              </p>
-          </div>
-        </div>
-      </section>
-      <div class="title-bar">
-        <h2 class="clubs-title">Extracurricular Activities</h2>
-      </div>
-      <section class="clubs">
-        <div class="container">
-          <div class="inner-container5">
-            <div class="wics">
-              <h3>Women in Computer Science Club</h3>
-              <p>University of Pittsburgh</p>
-            </div>
-            <div class="wics-picture">
-              <img src="https://media.licdn.com/dms/image/C4E03AQEOqDKyTN2ISQ/profile-displayphoto-shrink_800_800/0/1617679094045?e=2147483647&v=beta&t=PzFEFv_vTUC4oBztNPgxlaWA0HY_4j6z10vrxDezGLA" width="200px" height="200px" alt ="wics">
-            </div> 
-          </div>
-          <div class="inner-container6">
-            <div class="pittcsc">
-              <h3>Computer Science Club</h3>
-              <p>University of Pittsburgh</p>
-            </div>
-            <div class="csc-picture">
-               <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/nm4rj67y4shmloayo3of" alt="csc picture" class="harvard-logo" width="200px" height="200px">
-            </div>
-          </div>
-          <div class="inner-container7">
-            <div class="daehwa">
-              <h3>Daehwa: Korean Conversation club</h3>
-              <p>University of Pittsburgh</p>
-            </div>
-            <div class="daehwa-picture">
-               <img src="https://se-images.campuslabs.com/clink/images/1fba770b-1870-4bfe-b2a0-40dc5bd6fe2727425fff-3559-4c5b-be9d-99ff3e926afd.png?preset=med-sq" alt="daehwa picture" width="200px" height="200px">
-            </div>
-          </div>
-        </div> <!--container-->
-      </section>
-
-      <div class="title-bar">
-        <h2 class="my-socials">Useful Links</h2>
-      </div>
-      <section class="hobbies">
-        <div class="container">
-          <div class="codedex">
-            <img class="codedex-icon" src="https://www.codedex.io/images/codedex-bot-logo.gif" alt="codedex icon" height="130px" width="130px">
-            <a class="button" id="codedex-btn" href="https://www.codedex.io/@hannahbrianna19">
-              <img src="https://members-csforall.imgix.net/members/logos/coin-logo.png" id="codedex-logo"width="150px" height="40px">
-            </a>
-          </div>
-          <div class="duolingo">
-            <img class="duolingo-icon" src="https://duoplanet.com/wp-content/uploads/2022/04/Duolingo-owl-1024x823.png" alt="duolingo icon" height="150px" width="150px">
-            <a class="button" id="duolingo-btn" href="https://www.duolingo.com/profile/HannahMac01">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Duolingo_logo_black.svg/1024px-Duolingo_logo_black.svg.png" id="duolingo-logo"width="150px" height="40px">
-            </a>
-          </div>
-          <div class="discord">
-            <img class="discord-icon" src="https://static.vecteezy.com/system/resources/previews/018/930/718/original/discord-logo-discord-icon-transparent-free-png.png" alt="discord icon" height="150px" width="150px">
-            <a class="button" id="discord-btn" href="https://www.discord.com/">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Discord_Black_Text_Logo_%282015-2021%29.svg/1024px-Discord_Black_Text_Logo_%282015-2021%29.svg.png" id="discord-logo"width="140px" height="20px">
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
+    <script src="updated.js"></script>  
+    <!-- for the icons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--for the typing effect-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    </body>
 </html>
