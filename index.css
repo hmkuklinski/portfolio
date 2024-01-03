@@ -467,9 +467,13 @@ proper alignment, spacing
     padding: 10px;
     margin: 8px;
     box-sizing: border-box;
+    font-size: 12px;
 }
 .search-btn{
     margin: 0px 15px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--main-color);
 }
 .textbox, .known {
     display:flex;
