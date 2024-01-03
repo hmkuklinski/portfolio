@@ -1,442 +1,521 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@font-face{
-    font-family: 'Amsterdam';
-    src:url('https://www.fontspace.com/amsterdam-font-f29770')
-}
 *{
-    box-sizing:border-box;
-    margin:0px;
-    text-align:center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-main {
-    width: 90%;
+html{
+    scroll-behavior: smooth;
+    background-color: var(--second-color);
 }
 
-/*will change to one column if window is too small to support*/
-@media all and (max-width: 1000px) {
-    main {flex-direction:column;}
-    .inner-container2, .coding-languages, .inner-container1 h2{
-        display:none;
+::selection{
+    color:#fff;
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--second-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+
+/*defines and sets the global CSS variables so they are usable in the entire CSS file*/
+:root{
+    --main-color:#92bdd9;
+    --second-color: #fff;
+    --title-color: #222;
+    --subtitle-color: #000;
+}
+
+body{
+    min-height:100vh;
+    height: 1000px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+.img-fluid{
+    max-width:100%;
+    height:auto;
+}
+
+.section{
+    padding: 90px 0 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin:auto;
+    padding: 0 50px;
+}
+
+/*button formatting*/
+.btn, .btn-preview{
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 10px 15px;
+    color:#fff;
+    font-size:16px;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.btn-preview{
+    background-color: #80CCE6;
+    color:var(--title-color);
+}
+
+.btn:hover, .btn-preview:hover{
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.btn i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/*section formatting*/
+.section_title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform:capitalize;
+    line-height: 0.8;
+    color: #222;
+    position: relative;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+}
+.section_title::before{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: var(--main-color);
+}
+.section_title::after{
+    content: '';
+    position:absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+}
+
+/*start of navbar formatting*/
+header{ 
+    position:fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index:1000;
+}
+
+header.active{
+    background-color:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15); 
+}
+
+/*for the navbar link display*/
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo{
+    width: 330px;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.navbar{
+    white-space: nowrap;
+    transition: 0.5s;
+    z-index:999; /* will be behind the header*/
+    position:relative;
+}
+
+.nav-item{
+    display: inline-block;
+    margin: 0 5px;
+}
+.nav-link{
+    padding: 5px 10px;
+    position:relative;
+    transition: 0.4s;
+    color:#333;
+    font-weight:500;
+}
+
+.nav-link::before{
+    content: '';
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width:100%;
+    height:2px;
+    background-color: var(--main-color);
+    transform: scale(0);
+    transition: 0.4s;
+}
+.nav-link:hover {
+    color:var(--main-color);
+}
+.active-link{
+    color:var(--main-color);
+}
+
+/* for the underline on navlink hover*/
+.nav-link.active-link::before,
+.nav-link:hover::before{
+    transform:scale(1);
+}
+
+.close-icon{
+    font-size:25px;
+    position: absolute;
+    top:30px;
+    right: 250px;
+    z-index:1000;
+    color: var(--main-color);
+    cursor:pointer;
+    display:none;
+}
+.toggle-icon{
+    font-size:32px;
+    display:none;
+    cursor:pointer;
+    margin-right:10px;
+    display:none;
+    
+}
+
+@media screen and (max-width:750px){
+    /* ------ for navbar content ------*/
+    .container { 
+        padding: 0 30px;
     }
-    .container{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin:0px;
+    .navbar{
+        position:absolute;
+        right: 0;
+        top:0;
+        background-color:whitesmoke;
+        height:100vh;
+        padding-top:100px;
+        width:300px;
+        text-align:center;
+        transform:translate(110%);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.15); 
     }
-    h1{
-        font-size: 18px;
+    .navbar.active{
+        transform:translateX(0);
     }
-    p {
+    .nav-item{
+        display:block;
+        margin:20px 0;
+    }
+    .nav-link{
+        color:#333;
+    }
+    .toggle-icon{
+        display:block;
+    }
+    .close-icon{
+        display:block;
+    }
+    .intro-content h4{
+        font-size:16px;
+    }
+    .intro-content h1{
+        font-size:32px;
+    }
+    .intro-content p{
         font-size:15px;
     }
-    .inner-container1{
-        width:100%;
+    .intro-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        background-color: whitesmoke;
+        border-radius: 14px;
+        margin:5px;
         padding:10px;
-        height:auto;
     }
-    .inner-container12, .inner-container13, .inner-container14{
-        height:auto;
-        flex:1;
-        margin-left:10px;
-        width:fit-content;
+    .intro-img {
+        display:none;
     }
-    #contact-btn{
-        margin:10px;
-        padding:10px
+    .about-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        border-radius: 14px;
+        margin:5px;
+        padding:10px;
     }
-    .types{
+    .about-text p{
+        font-size:15px;
+    }
+    .about-text{
+        padding: 10px;
+    }
+    #about{
+        padding-bottom: 300px;
+
+    }
+    .known{
+        display:flex;
         flex-direction: column;
-        align-items: center;
     }
-    .main-landing-container{
-        width:100%;
-    }
-}
-
-.main-landing{
-    background: url(https://www.pitt.edu/sites/default/files/styles/tier_one_hero/public/2021-07/mission-t1-cl-top-aerial.jpg?h=2c66ef4f&itok=YlGwAwOr);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 150px;
-    margin-bottom: 0px;
-    width: 100%;
-    height: auto;
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.main-landing-container {
-    background-color: rgba(216, 227, 243, 0.75);
-    display:block;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 10px 10px 10px 80px;
-    width: 40%;
-    height: auto;
-    border-radius: 16px;
-    padding: 10px 30px;
-    text-align:center;
+   
     
 }
-#contact-btn{
-    margin:0px;
-}
-.main-landing-container p {
-    font-size: 20px;
-    color: black;
-}
 
-h1, h2, h3{
-    font-family: "poppins",sans-serif;
-}
-
-h1 {
-    font-size: 38px;
-    color: blue;
-}
-
-
-.header {
-    position:fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    padding: 20px;
-    background: white;
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    z-index: 100;
-}
-/* ------ The Navigation Code ------*/
-.navbar a {
-    position:relative;
-    font-size: 22px;
-    color:#333;
-    font-weight: 500;
-    text-decoration:none;
-    margin-left: 40px;
-}
-.navbar a::before {
-    content: '';
-    position: absolute;
-    top:100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color:skyblue;
-    transition: 0.3s;
-}
-.navbar a:hover::before {
-    width: 100%;
-}
-.navbar a:active {
-    color:skyblue;
-    transition: 0.3s all ease-in;
-}
-/* ------ main content ------*/
-body {
-    margin: 20px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-/* ------ holds the content ------*/
-.container {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.inner-container12, .inner-container13, .inner-container14 {
-    width: calc(33.33%-10px); 
-    flex:1;
-    margin: 0px 10px;
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-section{
-    display:flex;
-    margin:10px;
-    overflow:hidden;
-}
-/* ------general formatting for the sections ------*/
-.about-me{
+/*first section formatting*/
+.intro {
+    padding-top:114px;
+    position: relative;
     display:block;
+}
+
+.intro-container{
+    align-items: center;
+}
+.intro-container h4{
+    font-size: 28px;
+    font-weight:600;
+    color: var(--main-color);
+    text-transform:uppercase;
+}
+.intro-container h1{
+    font-size: 40px;
+    font-weight:600;
+    white-space:nowrap;
+    margin-bottom:10px;
+    color:var(--title-color);
+}
+
+.intro-container p{
+    margin: 10px 0 40px;
+    color: #333;
+    font-size:18px;
+}
+.intro-container .btn{
     margin-top: 20px;
-    height: 500px;
-    padding: 20px;
-    margin-bottom: 140px;  
+    display:inline-flex;
+    align-items: center;
 }
-/* ------ for the about-me section: the container itself, text/header element formatting ------*/
-.inner-container1 {
-    width: 70%;
-    padding: 20px;
-    font-size: 30px;
+
+.intro-social{
+    display:flex;
+    column-gap: 30px;
 }
-.inner-container2{
-    width:30%;
-}
-.inner-container1 p, h2 {
-    padding: 10px;   
-}
-p {
-    font-size: 26px;
-}
-.inner-container1 h2 {
-    font-size: 60px;
-}
-.profile-picture {
+
+/*------changing link display:
+to circle with a shadow behind
+proper alignment, spacing 
+------ */
+.intro-social a{
+    font-size:26px;
+    display:inline-flex;
+    width:50px;
+    height:50px;
+    align-items:center;
+    justify-content: center;
+    background-color:white;
+    color:#333;
+    transition: 0.3s;
     border-radius: 50%;
-    padding: 20px;
-    margin-top: 30px;
-    width: 270px;
-    height: 270px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-/*marquee formatting additional*/
-.coding-languages img {
-    margin-right: 50px; /*spaces out the different coding icons in the marquee*/
-}
-/*------ hackathon section!!! ------*/
 
-.hackathons {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.intro-social a:hover{
+    color:var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.intro-img{
+    text-align:right;
+}
+.intro-img img{
+    border: 2px solid var(--main-color);
+    border-radius:50%;
+    width: 220px;
+    height:220px;
+}
+
+.coding-icon{
+    height:150px;
+    width:150px;
+    border-radius: 14px;
+}
+
+/* ------ ABOUT SECTION ------*/
+.about-container {
     align-items: center;
-    justify-content: center;
-    height: auto;
-    margin-bottom: 140px;
+    height: 470px;
 }
 
-/*pitt challenge formatting*/
-.inner-container3 {
-    max-width: 100%;
-    padding: 10px;
-    height: auto;
-    margin: 20px;
-    font-size: 30px;   
-    background-color: rgba(216, 227, 243, 0.75);
-    border-radius:16px;
+.about-content p{
+    margin: 20px 0 15px;
 }
-/* ------ bullet point formatting: pitt challenge section ------*/
-.inner-container3 li{
-    font-size:25px;
+
+.about-text{
+    font-size: 18px;
+    word-spacing: 0.4em;
     text-align:left;
-    list-style: square;
-    margin-left: 0;
-    padding-left: 0;
-    list-style-type:square;
 }
-.text {
-    margin: 10px;
-    font-size: 20px;
-    padding: 20px 10px 10px 10px;
-    text-align: left;
+
+.about-img img{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    border:4px solid var(--main-color);
+    margin: 20px;
 }
-/* ------ harvard hacks ------*/
-.hack-title {
-    padding: 10px 0px;
-    
+
+/* ------ PROJECT SECTION ------ */
+#projects-win{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
-.hack-title p{
-    font-size: 18px;
-    font-style:italic;
+.projects-container {
+    display:flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    margin: 15px 40px;
 }
-.text {
-    margin: 10px;
-    font-size: 18px;
-    padding: 20px;
-}
-.clubs {
-    margin-bottom: 100px;
-    padding: 20px;
-}
-/* ------ formatting for the dividers -------*/
-.title-bar {
-    margin-top: 15px;
-    color: black;
-    border-bottom: 1px solid black;
-}
-.title-bar h2 {
-    font-size: 45px;
-}
-/* ------ section titles ------*/
-.hackathons-title, .clubs-title, .projects-title {
-    font-size: 36px;
-    margin-bottom: 0px;
-}
-/* ------ Project Containers ------ */
-.inner-container8, .inner-container9 {
-    width: 50%;
-    font-size: 30px; 
+
+.project-card{
+    margin: 30px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color:whitesmoke;
+    width: 300px;
     height: auto;
-    margin: 0px 20px;
-} 
-.inner-container8 p, .inner-container9 p{
-    font-size: 30px;
-}
-/* ------ picture of project created ------*/
-.preview {
-    margin: 0px 20px;
-}
-.preview img {
-    width: 100%;
-}
-
-/* ------ Button formatting ------ */
-.button {
-    background-color:#003594;
-    color:whitesmoke;
-    font-size: 24px;
-    padding: 15px 50px;
-    border-radius: 8px;
     text-align:center;
-    display:inline-block;
-    margin: 20px 10px;
-    text-decoration:none;
+    font-size: 16px;
+}
+.project-card h3, .club-box h3{
+    font-size: 22px;
+    color: var(--main-color);
 }
 
-.hackbtn{
-    background-color:#003594;
-    color:whitesmoke;
-    font-size: 24px;
-    padding: 15px 50px;
-    border-radius: 8px;
-    text-align:center;
-    display:inline-block;
-    margin: 20px 10px;
-    text-decoration:none;
+.project-preview img, .picture img{
+    width: 90%;
+    height: 150px;
+    margin: 5px;
+    border-radius: 15px;
 }
-
-
-
-.main-landing-container > .button:hover{
-    padding: 15px 50px;
-    background-color:#FFB81C;
-    transition: all 0.5s;   
-}
-
-.button.live-preview {
-    background-color:rgb(0, 172, 240);
-    color:whitesmoke;
-}
-.hobbies {
+.project-btn{
     display:flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    justify-content: center;
+    margin: 10px 5px;
+}
+.github-icon{
+    width: 70px;
+    height: 50px;
 }
 
-.duolingo , .codedex, .discord{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.project-tags {
+    color: var(--main-color);
+}
+
+.project-tags ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.project-tags li{
+    display:inline-block;
+    margin-right: 5px;
+}
+
+#search{
+    width: 60%;
+    padding: 10px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+.search-btn{
     margin: 0px 15px;
 }
-
-#duolingo-btn {
-    background-color: #58cc02;
-    color: #FFFFFF;
-    padding: 13px 7px 3px 7px;
-}
-#duolingo-btn:hover {
-    background-color: #89e219;
-    transition: all 0.5s;
-    padding: 15px 45px;
-}
-
-#codedex-btn {
-    padding: 7px 15px;
-    background-color: rgba(15, 21, 36, 0.75);
-}
-
-#codedex-btn:hover {
-    transition: all 0.5s;
-    padding: 15px 45px;
-}
-#discord-btn {
-    background-color: #7289da;
-    padding: 15px;
-}
-#discord-btn:hover {
-    transition: all 0.5s;
-    padding: 25px 45px;
-}
-
-/*for the projects directory section!!!*/
-
-.types {
+.textbox, .known {
     display:flex;
-    flex-direction:row;
-    align-items:flex-start;
-    justify-content: space-around;
-    flex:0.33%;
-    width: 90%;
-    height:900px;
-    margin-bottom: 50px;
-    padding: 10px;
-}
-
-
-
-.python-title > h2, .front-title >h2, .java-title>h2 {
-    font-size: 32px;
-    text-decoration:underline;
-}
-
-.front-title, .python-title , .java-title{
-    padding: 10px;
-    margin: 0px 10px 15px 10px;
-}
-
-.front-image >img , .py-image >img , .java-image > img {
-    margin: 20px;
-    padding: 10px;
-}
-
-#front-btn:hover, #py-button:hover, #java-button:hover {
-    padding: 15px 30px;
-}
-#front-btn, #py-button, #java-button{
-    padding: 15px 30px;
-}
-#front-btn {
-    background-color: red;
-}
-
-#front-btn:hover {
-    background-color: rgb(252, 252, 28);
-    transition: all 1 ease-in-out;
-    color: black;
-}
-
-#py-button:hover {
-    background-color:rgb(0, 172, 240);
-    transition: all 1 ease-in-out;
-}
-
-#java-button {
-    background-color:orange;
-}
-
-#java-button:hover{
-    background-color: blue;
-    transition: all 1 ease-in-out;
-}
-
-.inner-container12 p, .inner-container13 p, .inner-container14 p {
-    font-size: 28px;
+    align-items: center;
+    justify-content: center;
     text-align:center;
-    padding: 10px;
+}
+
+
+
+.known .header{
     margin: 10px;
+}
+
+#search-fail{
+    display:none;
+    margin: 30px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color:whitesmoke;
+    width: 300px;
+    height: auto;
+    text-align:center;
+    font-size: 16px;
+}
+
+/* ------ CLUBS/HACKATHONS ------*/
+#club {
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.clubs-container{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin: 0px;
+
+}
+
+.club-box {
+    margin: 15px;
+    width: 260px;
+    border-radius: 10px;
+    padding: 15px;
+    height: 230px;
+    text-align:center;
+    font-size: 16px;
 }
