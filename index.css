@@ -254,6 +254,7 @@ header .container{
     .close-icon{
         display:block;
     }
+    
     .intro-content h4{
         font-size:16px;
     }
@@ -263,6 +264,7 @@ header .container{
     .intro-content p{
         font-size:15px;
     }
+
     .intro-container{
         grid-template-columns: 1fr;
         text-align: center;
@@ -318,7 +320,7 @@ header .container{
 .intro-container h1{
     font-size: 40px;
     font-weight:600;
-    white-space:nowrap;
+    white-space: nowrap;
     margin-bottom:10px;
     color:var(--title-color);
 }
