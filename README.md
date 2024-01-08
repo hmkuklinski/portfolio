@@ -1,6 +1,6 @@
 # Welcome to my Personal Website!
 
-I created this website with the intentions of showing my journey as a developer.
+I created this website with the intentions of showing my journey as a developer.<br>
 [The Website](https://hannahkuklinski.vercel.app/)
 
 ## Table of Contents
