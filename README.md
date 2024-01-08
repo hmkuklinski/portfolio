@@ -9,9 +9,11 @@ I created this website with the intentions of showing my journey as a developer.
 
 # Portfolio GitHub
 The files for my website are: index.html, index.css, and index.js
+
 These files are used on my current website.
 
 The files for my original version are: PersonalWebsite.html PersonalWebsite.css
+
 These files were created during my first month as a developer. 
 
 # About
