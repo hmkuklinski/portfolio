@@ -37,6 +37,6 @@ It will filter out any project that does not have the searched language or frame
 ![Project Preview](https://media.discordapp.net/attachments/1011310537570795581/1192094120764776478/image.png?ex=65a7d32a&is=65955e2a&hm=83b38d625149325aa10b97bea5d0f110ebeabacdf36412c8617b1d96ebd511b3&=&format=webp&quality=lossless&width=826&height=397)
 
 # To Do
-*complete the contact section (maybe as a footer?)
-*include the flashcard project in the project display
-*include the hackathon terminal project in the project display
+* complete the contact section (maybe as a footer?)
+* include the flashcard project in the project display
+* include the hackathon terminal project in the project display
