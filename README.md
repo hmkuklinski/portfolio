@@ -12,7 +12,7 @@ The files for my website are: index.html, index.css, and index.js <br>
 *These files are used on my current website.*
 
 The files for my original version are: PersonalWebsite.html PersonalWebsite.css <br>
-*These files were created during my first month as a developer. *
+*These files were created during my first month as a developer.*
 
 # About
 The first two sections of my website are all about me- what languages and skillsets I have, my LinkedIn/GitHUb profiles, the story of why I started coding and my future goals.
