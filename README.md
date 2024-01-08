@@ -40,3 +40,4 @@ It will filter out any project that does not have the searched language or frame
 * complete the contact section (maybe as a footer?)
 * include the flashcard project in the project display
 * include the hackathon terminal project in the project display
+* attach updated resume
