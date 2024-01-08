@@ -1,6 +1,8 @@
 # Welcome to my Personal Website!
 
 I created this website with the intentions of showing my journey as a developer.<br>
+![Website Preview](https://media.discordapp.net/attachments/1011310537570795581/1192094120441810965/image.png?ex=65a7d32a&is=65955e2a&hm=db19a58f0364e96020f98588ed3a6a9f0957f02148f8b85b6bc8f086a0804773&=&format=webp&quality=lossless&width=975&height=397)
+
 [The Website](https://hannahkuklinski.vercel.app/)
 
 ## Table of Contents
