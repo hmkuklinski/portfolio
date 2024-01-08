@@ -1,11 +1,13 @@
 # Welcome to my Personal Website!
 
 I created this website with the intentions of showing my journey as a developer.
+[The Website](https://hannahkuklinski.vercel.app/)
 
 ## Table of Contents
 1. [Navigating the Portfolio GitHub](#PortfolioGitHub)
 2. [About Me](#About)
 3. [Projects](#Projects)
+4. [To Do](#ToDo)
 
 # Portfolio GitHub
 The files for my website are: index.html, index.css, and index.js <br>
@@ -21,7 +23,7 @@ The first two sections of my website are all about me:
 * the story of why I started coding 
 * my future goals.
 
-![About Preview](https://media.discordapp.net/attachments/1011310537570795581/1192094120441810965/image.png?ex=65a7d32a&is=65955e2a&hm=db19a58f0364e96020f98588ed3a6a9f0957f02148f8b85b6bc8f086a0804773&=&format=webp&quality=lossless&width=975&height=397)
+Includes a navigation bar with useful links and a text display with a typing effect.
 
 # Projects
 This is the section I am most excited to share with others. 
@@ -33,3 +35,8 @@ These tags allow for the user to search my project by language or framework used
 It will filter out any project that does not have the searched language or framework tag.
 
 ![Project Preview](https://media.discordapp.net/attachments/1011310537570795581/1192094120764776478/image.png?ex=65a7d32a&is=65955e2a&hm=83b38d625149325aa10b97bea5d0f110ebeabacdf36412c8617b1d96ebd511b3&=&format=webp&quality=lossless&width=826&height=397)
+
+# To Do
+*complete the contact section (maybe as a footer?)
+*include the flashcard project in the project display
+*include the hackathon terminal project in the project display
