@@ -100,4 +100,63 @@ document.addEventListener("DOMContentLoaded", function (){
         let failMessage= document.getElementById('search-fail');
         failMessage.style.display='none';
     }
+
+    //define variables for the display cert "buttons"
+    const pythonCert= document.getElementById('py-cert');
+    const pyCircle=document.getElementById('py');
+    const jsCert= document.getElementById('js-cert');
+    const jsCircle=document.getElementById('js');
+    const cssCert = document.getElementById('css-cert');
+    const cssCircle = document.getElementById('css');
+    const htmlCert = document.getElementById('html-cert');
+    const htmlCircle= document.getElementById('html');
     
+    
+    function displayPython(){
+        pythonCert.style.display="block";
+        jsCert.style.display="none";
+        cssCert.style.display="none";
+        htmlCert.style.display="none";
+
+        pyCircle.innerHTML = '<ion-icon name="ellipse"></ion-icon>';
+        jsCircle.innerHTML= '<ion-icon name="ellipse-outline"></ion-icon>';
+        cssCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        htmlCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+    }
+
+    function displayJs(){
+        jsCert.style.display="block";
+        pythonCert.style.display="none";
+        cssCert.style.display="none";
+        htmlCert.style.display="none";
+
+        pyCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        jsCircle.innerHTML= '<ion-icon name="ellipse"></ion-icon>';
+        cssCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        htmlCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+    }
+    
+    function displayCss(){
+        cssCert.style.display="block";
+        pythonCert.style.display="none";
+        jsCert.style.display="none";
+        htmlCert.style.display="none";
+
+        pyCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        jsCircle.innerHTML= '<ion-icon name="ellipse-outline"></ion-icon>';
+        cssCircle.innerHTML = '<ion-icon name="ellipse"></ion-icon>';
+        htmlCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+    }
+
+    function displayHtml(){
+        htmlCert.style.display="block";
+        pythonCert.style.display="none";
+        jsCert.style.display="none";
+        cssCert.style.display="none";
+
+        pyCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        jsCircle.innerHTML= '<ion-icon name="ellipse-outline"></ion-icon>';
+        cssCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        htmlCircle.innerHTML = '<ion-icon name="ellipse"></ion-icon>';
+        
+    }

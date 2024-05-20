@@ -417,7 +417,7 @@ proper alignment, spacing
 .projects-container {
     display:flex;
     align-items: flex-start;
-    justify-content:flex-start;
+    justify-content:center;
     flex-wrap:wrap;
     margin: 15px 40px;
 }
@@ -529,4 +529,44 @@ proper alignment, spacing
     height: 230px;
     text-align:center;
     font-size: 16px;
+}
+
+.certificates{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+#py-cert{
+    display:block;
+}
+#js-cert{
+    display:none;
+}
+#css-cert{
+    display:none;
+}
+#html-cert{
+    display:none;
+}
+
+.cert-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.cert-display{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 10px 5px;
+}
+
+.ct{
+    cursor:pointer;
+    color: blue;
+    margin: 20px;
 }
