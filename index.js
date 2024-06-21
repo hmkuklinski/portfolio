@@ -101,6 +101,33 @@ document.addEventListener("DOMContentLoaded", function (){
         failMessage.style.display='none';
     }
 
+    //for hiding the extra text on Animal Crossing project description:
+    document.addEventListener("DOMContentLoaded", function() {
+        var fullText = document.getElementById("full-description").textContent.trim();
+        var shortText = fullText.substring(0, 100);
+      
+        document.getElementById("short-description").textContent = shortText;
+        
+        document.getElementById("show-more").addEventListener("click", function(event) {
+          event.preventDefault();
+          
+          var fullDesc = document.getElementById("full-description");
+          var ellipsis = document.getElementById("ellipsis");
+          var shortDesc = document.getElementById("short-description");
+      
+          if (fullDesc.style.display === "none") {
+            fullDesc.style.display = "inline";
+            ellipsis.style.display = "none";
+            shortDesc.style.display = "none";
+          } else {
+            fullDesc.style.display = "none";
+            ellipsis.style.display = "inline";
+            shortDesc.style.display = "inline";
+          }
+        });
+      });
+          
+
     //define variables for the display cert "buttons"
     const pythonCert= document.getElementById('py-cert');
     const pyCircle=document.getElementById('py');

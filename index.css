@@ -488,7 +488,18 @@ proper alignment, spacing
     text-align:center;
 }
 
+.project-text {
+    position: relative;
+}
 
+#short-description {
+    display: inline;
+}
+
+#ellipsis {
+    display: inline;
+}
+  
 
 .known{
     margin-top: 10px;
