@@ -17,6 +17,15 @@ document.addEventListener("DOMContentLoaded", function (){
             navbarMenu.classList.remove('active');
         })
     })
+
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+        if (document.body.classList.contains('dark-theme')) {
+            this.innerHTML = `<ion-icon name="sunny-outline"></ion-icon> Light Mode`;
+        } else {
+            this.innerHTML = `<ion-icon name="moon-outline"></ion-icon> Dark Mode`;
+        }
+    });
     
     function scrollHeader(){
         const header= document.getElementById('header');
@@ -137,6 +146,8 @@ document.addEventListener("DOMContentLoaded", function (){
     const cssCircle = document.getElementById('css');
     const htmlCert = document.getElementById('html-cert');
     const htmlCircle= document.getElementById('html');
+    const reactCircle= document.getElementById('react');
+    const reactCert = document.getElementById('react-cert');
     
     
     function displayPython(){
@@ -144,11 +155,13 @@ document.addEventListener("DOMContentLoaded", function (){
         jsCert.style.display="none";
         cssCert.style.display="none";
         htmlCert.style.display="none";
+        reactCert.style.display="none";
 
         pyCircle.innerHTML = '<ion-icon name="ellipse"></ion-icon>';
         jsCircle.innerHTML= '<ion-icon name="ellipse-outline"></ion-icon>';
         cssCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
         htmlCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        reactCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
     }
 
     function displayJs(){
@@ -156,11 +169,13 @@ document.addEventListener("DOMContentLoaded", function (){
         pythonCert.style.display="none";
         cssCert.style.display="none";
         htmlCert.style.display="none";
+        reactCert.style.display="none";
 
         pyCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
         jsCircle.innerHTML= '<ion-icon name="ellipse"></ion-icon>';
         cssCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
         htmlCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        reactCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
     }
     
     function displayCss(){
@@ -168,11 +183,13 @@ document.addEventListener("DOMContentLoaded", function (){
         pythonCert.style.display="none";
         jsCert.style.display="none";
         htmlCert.style.display="none";
+        reactCert.style.display="none";
 
         pyCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
         jsCircle.innerHTML= '<ion-icon name="ellipse-outline"></ion-icon>';
         cssCircle.innerHTML = '<ion-icon name="ellipse"></ion-icon>';
         htmlCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        reactCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
     }
 
     function displayHtml(){
@@ -180,10 +197,26 @@ document.addEventListener("DOMContentLoaded", function (){
         pythonCert.style.display="none";
         jsCert.style.display="none";
         cssCert.style.display="none";
+        reactCert.style.display="none";
 
         pyCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
         jsCircle.innerHTML= '<ion-icon name="ellipse-outline"></ion-icon>';
         cssCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
         htmlCircle.innerHTML = '<ion-icon name="ellipse"></ion-icon>';
+        reactCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
         
+    }
+
+    function displayReact(){
+        htmlCert.style.display="none";
+        pythonCert.style.display="none";
+        jsCert.style.display="none";
+        cssCert.style.display="none";
+        reactCert.style.display="block";
+
+        pyCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        jsCircle.innerHTML= '<ion-icon name="ellipse-outline"></ion-icon>';
+        cssCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        htmlCircle.innerHTML = '<ion-icon name="ellipse-outline"></ion-icon>';
+        reactCircle.innerHTML = '<ion-icon name="ellipse"></ion-icon>';
     }
