@@ -13,25 +13,32 @@
     <body>
         <header id="header">
             <div class="container">
-                <a href="" class="logo">
+                <!-- <a href="" class="logo">
                     <img src="banner.jpg" alt="logo" class="img-fluid">
-                </a>
+                </a> -->
                 <ul class="navbar">
                     <li class="nav-item">
-                        <a href="/" class="nav-link active-link"><ion-icon name="home-outline"></ion-icon> Home</a>
+                        <a href="#" class="nav-link active-link"><ion-icon name="home-outline"></ion-icon> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#intro" class="nav-link"><ion-icon name="person-outline"></ion-icon> About</a>
+                        <a href="#about" class="nav-link"><ion-icon name="person-outline"></ion-icon> About</a>
                     </li>
                     <li class="nav-item">
                         <a href="#projects-win" class="nav-link"><ion-icon name="folder-outline"></ion-icon> Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a href="Hannah Kuklinski Resume 2-14.pdf" target="_blank"class="nav-link"><ion-icon name="document-outline"></ion-icon> Resume</a>
+                        <a href="#club" class="nav-link"><ion-icon name="people-outline"></ion-icon> Clubs</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><ion-icon name="chatbubbles-outline"></ion-icon> Contact</a>
+                        <a href="#contact" class="nav-link"><ion-icon name="chatbubbles-outline"></ion-icon> Connect</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#certificates" class="nav-link"><ion-icon name="checkmark-outline"></ion-icon>Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="theme-toggle" class="nav-link"><ion-icon name="moon-outline"></ion-icon> Dark Mode</a>
+                    </li>
+                    
                     <ion-icon name="close-outline" class="close-icon"></ion-icon>
                 </ul> 
                 <ion-icon name="menu-outline" class="toggle-icon"></ion-icon>        
@@ -44,24 +51,20 @@
                     <div class="intro-content">
                         <h4>Hello! </h4>
                         <h1>I'm
-                            <span class="typed" data-typed-items=" Hannah Kuklinski,a CS Major,a Future Developer,a Polyglot, a STAY"></span>
+                            <span class="typed" data-typed-items=" Hannah Kuklinski,a CS Major,a Frontend Dev,a Polyglot, a STAY, learning ThreeJs"></span>
                         </h1>
-                        <p>I'm a Computer Science student studying at the University of Pittsburgh.
-                            I am currently building a foundational knowledge in Python, Java, HTML, and CSS and I am eager to learn more through real world experiences, applications, and projects.    
+                        <p>My favorite language is JavaScript and I love making projects with React, Python, and Java.
+                           <br> I’m interested in web development and currently looking for internships.    
                         </p>
                         <div class="intro-social">
                             <a href="https://github.com/hmkuklinski"><ion-icon name="logo-github"></ion-icon></a>
-                            <a href="https://www.linkedin.com/in/hannahkuklinski/"><ion-icon name="logo-linkedin"></ion-icon></a>
-                            
+                            <a href="https://www.linkedin.com/in/hannahkuklinski/"><ion-icon name="logo-linkedin"></ion-icon></a>  
+                            <a href="mailto:hannahbrianna19@gmail.com" ><ion-icon name="mail-outline"></ion-icon></a>     
                         </div>
-                        <a href="#contact" class="btn">
-                            Read More
-                            <ion-icon name="chevron-forward-outline"></ion-icon>
-                        </a>
+                        <!-- <div class="contact">
+                            <button class="btn-contact" href="#contact">Contact</button>
+                        </div> -->
                         
-                    </div>
-                    <div class="intro-img">
-                        <img src="selfie.jpg" alt="top image" class="img-fluid">
                     </div>
                 </div>
             </section>
@@ -392,7 +395,7 @@
                 </div>
             </section>
             <section class="certificates">
-                <h2 class="section_title">Certificates</h2>
+                <h2 class="section_title" id="certificates">Certificates</h2>
                 <div class="cert-container" id="py-cert">
                     <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/81327700" alt="codedex-python">
                 </div>
@@ -405,11 +408,46 @@
                 <div class="cert-container" id="html-cert">
                     <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/82190872" alt="codedex-html">
                 </div>
+                <div class="cert-container" id="react-cert">
+                    <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/107434768" alt="codedex-react">
+                </div>
                 <div class="cert-display">
                     <div class="ct" id="py" onclick="displayPython()"><ion-icon name="ellipse"></ion-icon></ion-icon></div>
                     <div class="ct" id="js" onclick="displayJs()"><ion-icon name="ellipse-outline"></ion-icon></div>
+                    <div class="ct" id="react" onclick="displayReact()"><ion-icon name="ellipse-outline"></ion-icon></div>
                     <div class="ct" id="css" onclick="displayCss()"><ion-icon name="ellipse-outline"></ion-icon></div>
                     <div class="ct" id="html" onclick="displayHtml()"><ion-icon name="ellipse-outline"></ion-icon></div>
+                   
+                </div>
+            </section>
+
+            <section class="contact"  id="contact">
+                <h2 class="section_title">Connect</h2>
+                <div class="contact-container container grid">
+                    <div class="contact-box">
+                        <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="linkedin">
+                        <a href="https://www.linkedin.com/in/hannahkuklinski/">LinkedIn</a>  
+                    </div>
+                    <div class="contact-box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github">
+                        <a href="https://github.com/hmkuklinski">GitHub</a>
+                    </div>
+                    <div class="contact-box">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-gmail-2981844-2476484.png?f=webp&w=256" alt="gmail">
+                        <a href="mailto:hannahbrianna19@gmail.com" >Email</a>     
+                    </div>
+                    <div class="contact-box">
+                        <img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtinnyc.com/sites/www.builtinnyc.com/files/2023-08/codedex%20logo%20big.png" alt="codedex">
+                        <a href="https://www.codedex.io/@hannahbrianna19">Codedex</a>
+                    </div>
+                    <div class="contact-box">
+                        <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/original/discord-logo-icon-editorial-free-vector.jpg" alt="discord">
+                        <a href="https://www.discord.com">hannahmackenzie01</a>
+                    </div>
+                    <div class="contact-box">
+                        <img src="https://cdn.jim-nielsen.com/ios/512/duolingo-2019-01-02.png?rf=1024" alt="duolingo">
+                        <a href="https://www.duolingo.com/profile/HannahMac01">Duolingo</a>
+                    </div>
                 </div>
             </section>
         </main>
