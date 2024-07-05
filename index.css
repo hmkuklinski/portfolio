@@ -467,18 +467,25 @@ proper alignment, spacing
     display:inline-block;
     margin-right: 5px;
 }
+.project-search{
+    background-color: pink;
+    width: 90%;
+    padding: 12px;
+}
 
 #search{
-    width: 60%;
+    width: 90%;
     padding: 10px;
     margin: 8px;
     box-sizing: border-box;
     font-size: 12px;
+    border-radius:12px;
+    text-align:center;
 }
 .search-btn{
-    margin: 0px 15px;
+   
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 12px;
     background-color: var(--main-color);
 }
 .textbox, .known {
