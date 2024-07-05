@@ -92,20 +92,20 @@
                 </div>
             </section>
             <section class="projects section" id="projects-win">
-                <h2 class="section_title">Projects</h2>
+                <h2 class="section_title" id="project-title">Projects</h2>
                 <div class="project-search">
                     <div class="textbox">
-                        <input type="text" id="search" placeholder="Search Project by Language or Framework">
+                        <input type="text" id="search" placeholder="Search Project by Language or Framework" autocomplete="off">
                         <button onclick="filterProjects()" class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+                        <button onclick="resetFilter()" class="btn-reset"><ion-icon name="close-outline"></ion-icon></button>
                     </div>
                     <div class="known">
                         <div class="suggested">
                             <h4>Suggested: </h4>
                             <div class="known-text">
                               HTML, CSS, JavaScript, Python, Pandas, GeoPandas, Java
-                          </div>
+                            </div>
                         </div>
-
                     </div>
                     
                 </div>
@@ -424,30 +424,42 @@
             <section class="contact"  id="contact">
                 <h2 class="section_title">Connect</h2>
                 <div class="contact-container container grid">
-                    <div class="contact-box">
+                    <a href="https://www.linkedin.com/in/hannahkuklinski/" target="_blank">
+                        <div class="contact-box">
                         <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="linkedin">
-                        <a href="https://www.linkedin.com/in/hannahkuklinski/">LinkedIn</a>  
-                    </div>
-                    <div class="contact-box">
-                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github">
-                        <a href="https://github.com/hmkuklinski">GitHub</a>
-                    </div>
-                    <div class="contact-box">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-gmail-2981844-2476484.png?f=webp&w=256" alt="gmail">
-                        <a href="mailto:hannahbrianna19@gmail.com" >Email</a>     
-                    </div>
-                    <div class="contact-box">
-                        <img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtinnyc.com/sites/www.builtinnyc.com/files/2023-08/codedex%20logo%20big.png" alt="codedex">
-                        <a href="https://www.codedex.io/@hannahbrianna19">Codedex</a>
-                    </div>
-                    <div class="contact-box">
-                        <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/original/discord-logo-icon-editorial-free-vector.jpg" alt="discord">
-                        <a href="https://www.discord.com">hannahmackenzie01</a>
-                    </div>
-                    <div class="contact-box">
-                        <img src="https://cdn.jim-nielsen.com/ios/512/duolingo-2019-01-02.png?rf=1024" alt="duolingo">
-                        <a href="https://www.duolingo.com/profile/HannahMac01">Duolingo</a>
-                    </div>
+                       LinkedIn 
+                        </div>
+                    </a> 
+                    <a href="https://github.com/hmkuklinski">
+                        <div class="contact-box">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github">
+                            GitHub
+                        </div>
+                    </a>
+                    <a href="mailto:hannahbrianna19@gmail.com" >
+                        <div class="contact-box">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-gmail-2981844-2476484.png?f=webp&w=256" alt="gmail">
+                        Email    
+                        </div>
+                    </a> 
+                    <a href="https://www.codedex.io/@hannahbrianna19">
+                        <div class="contact-box">
+                            <img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtinnyc.com/sites/www.builtinnyc.com/files/2023-08/codedex%20logo%20big.png" alt="codedex">
+                            Codédex
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/hkuklinski/">
+                        <div class="contact-box" >
+                            <img src="https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338393_640.png" alt="instagram">
+                            Instagram
+                        </div>
+                    </a>
+                    <a href="https://www.duolingo.com/profile/HannahMac01">
+                        <div class="contact-box">
+                            <img src="https://cdn.jim-nielsen.com/ios/512/duolingo-2019-01-02.png?rf=1024" alt="duolingo">
+                            Duolingo
+                        </div>
+                    </a>
                 </div>
             </section>
         </main>

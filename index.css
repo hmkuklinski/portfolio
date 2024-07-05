@@ -110,6 +110,11 @@ ul {
     transition: 0.4s;
     cursor:pointer;
 }
+.btn-reset{
+    box-shadow: 2px 2px 2px var(--title-color);
+    border: 1px solid var(--subtitle-color);
+    margin: 0;
+}
 
 .btn-preview{
     color:var(--title-color);
@@ -352,6 +357,9 @@ header .container{
         display:flex;
         flex-direction: column;
     }
+    #search{
+        text-align:left;
+    }
     .contact-container{
         flex-direction: column;
     }
@@ -591,30 +599,58 @@ proper alignment, spacing
     color: var(--main-color);
 }
 .project-search{
-    background-color: pink;
-    width: 90%;
+    width: 80%;
     padding: 12px;
 }
 
 #search{
-    width: 90%;
+    width: 75%;
+    min-width: 300px;
     padding: 10px;
-    margin: 8px;
+    margin: 8px 8px 8px 100px;
     box-sizing: border-box;
-    font-size: 12px;
+    border: 1px solid var(--title-color);
+    font-size: 15px;
     border-radius:12px;
-    text-align:center;
+    text-align: center;
+    background-color: var(--second-color);
+}
+#search input{
+    color: var(--title-color);
 }
 .search-btn{
-   
+    position: relative;
+    right: 60px;
+    top: 6px;
+    border:none;
     padding: 10px;
     border-radius: 12px;
-    background-color: var(--main-color);
+    width: 34px;
+    height: 35px;
     cursor:pointer;
+    background-color: var(--second-color);
 }
-.search-btn ion-icon{
+.btn-reset{
+    position:relative;
+    right: 140px;
+    top: 8px;
+    border:none;
+    padding: 10px;
+    box-shadow:none;
+    width: 34px;
+    height: 35px;
+    cursor:pointer;
+    background-color: var(--second-color);
+}
+.search-btn ion-icon, .btn-reset ion-icon{
+    display:inline-block;
+    align-items: baseline;
     background-color:transparent;
     color: var(--title-color);
+    font-size: 20px;
+}
+.btn-reset ion-icon{
+    font-size: 22px;
 }
 .textbox, .known {
     display:flex;
@@ -622,6 +658,10 @@ proper alignment, spacing
     justify-content: center;
     text-align:center;
 }
+.textbox{
+    align-items: baseline;
+}
+
 
 #short-description {
     display: inline;
@@ -635,13 +675,20 @@ proper alignment, spacing
 .known{
     margin-top: 10px;
 }
+.suggested{
+    display:block;
+}
+.filtered{
+    display:none;
+}
+
 
 #search-fail{
     display:none;
     margin: 30px;
     border-radius: 10px;
     padding: 15px;
-    background-color:whitesmoke;
+    background-color:transparent;
     width: 300px;
     height: auto;
     text-align:center;
@@ -666,9 +713,8 @@ proper alignment, spacing
     margin: 0px;
 }
 .contact-container{
-    min-height: 200px;
-    max-height: 600px;
     max-width: 95%;
+    flex-direction: row;
 }
 
 .club-box {
@@ -688,16 +734,25 @@ proper alignment, spacing
     margin: 5px;
     text-align: center;
     font-size: 12px;
+    background-color: var(--second-color);
+    text-wrap:wrap;
+}
+.contact-box:hover{
+    background-color: var(--main-color);
+}
+.contact-box:hover img{
+    background-color: var(--main-color);
 }
 .contact-box a{
     color: var(--main-color);
 }
 .contact-box img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     padding: 10px;
 }
+
 
 .certificates{
     display:flex;

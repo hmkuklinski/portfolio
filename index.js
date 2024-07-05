@@ -12,11 +12,15 @@ document.addEventListener("DOMContentLoaded", function (){
         navbarMenu.classList.remove('active');
     });
     
-    navbarLinks.forEach((navbarLink) =>{
-        navbarLink.addEventListener('click', ()=>{
+    navbarLinks.forEach((navbarLink) => {
+        navbarLink.addEventListener('click', () => {
             navbarMenu.classList.remove('active');
-        })
-    })
+            // Remove 'active-link' class from all navbar links
+            navbarLinks.forEach((link) => link.classList.remove('active-link'));
+            // Add 'active-link' class to the clicked navbar link
+            navbarLink.classList.add('active-link');
+        });
+    });
 
     document.getElementById('theme-toggle').addEventListener('click', function() {
         document.body.classList.toggle('dark-theme');
@@ -94,11 +98,77 @@ document.addEventListener("DOMContentLoaded", function (){
             }
     
         }
+        filterDisplay= returnDisplay();
+        document.getElementById('search').value= '';
         if (needMessage){
             displayFail();
+            document.querySelector('.suggested').innerHTML=`We were not able to find any projects. Maybe try entering a new search. To reset the filter, click the X`;
         }
+        else{
+             document.querySelector('.suggested').innerHTML=`You are currently looking at ${filterDisplay} projects. To reset the filter, click the X`;
+        }
+       
+        document.getElementById('project-title').innerHTML= `${filterDisplay} Projects`;
     
     }
+    function returnDisplay() {
+        const entered = document.getElementById('search').value.toUpperCase().trim();
+    
+        const displayMap = {
+            'HTML': 'HTML',
+            'CSS': 'CSS',
+            'JAVASCRIPT': 'Javascript',
+            'REACT': 'React',
+            'GEOPANDAS': 'GeoPandas',
+            'PANDAS': 'Pandas',
+            'JAVA': 'Java'
+        };
+    
+        // Check if the entered value exists in the displayMap
+        if (entered in displayMap) {
+            return displayMap[entered];
+        } else {
+            return 'No';
+        }
+    }
+    
+    function resetFilter(){
+        let projectCards= document.getElementsByClassName('project-card');
+        for (let i=0; i<projectCards.length;i++){
+            projectCards[i].style.display='';
+        }
+        document.getElementById('search').value= '';
+        document.querySelector('.suggested').innerHTML= `<h4>Suggested: </h4>
+                            <div class="known-text">
+                              HTML, CSS, JavaScript, Python, Pandas, GeoPandas, Java
+                            </div>`;
+        document.getElementById('project-title').innerHTML= 'Projects';
+       
+    }
+
+    //for user clicking enter after typing search!
+    document.getElementById('search').addEventListener('keydown', function(event) {
+        // Check if the Enter key is pressed
+        if (event.key === 'Enter') {
+            filterProjects();
+        }
+    });
+
+    function updatePlaceholder() {
+        const searchInput = document.getElementById('search');
+        if (window.innerWidth <= 600) {
+            searchInput.placeholder = "Search Project";
+        } else {
+            searchInput.placeholder = "Search Project by Language or Framework";
+        }
+    }
+
+    // Update placeholder on page load
+    updatePlaceholder();
+
+    // Update placeholder on window resize
+    window.addEventListener('resize', updatePlaceholder);
+    
     
     function displayFail(){
         let failMessage= document.getElementById('search-fail');
