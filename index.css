@@ -605,6 +605,7 @@ proper alignment, spacing
 
 #search{
     width: 75%;
+    height: 45px;
     min-width: 300px;
     padding: 10px;
     margin: 8px 8px 8px 100px;
@@ -661,16 +662,10 @@ proper alignment, spacing
 .textbox{
     align-items: baseline;
 }
-
-
-#short-description {
-    display: inline;
+#search input:focus {
+    box-shadow: none; 
 }
 
-#ellipsis {
-    display: inline;
-}
-  
 
 .known{
     margin-top: 10px;
