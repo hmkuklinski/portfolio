@@ -43,8 +43,7 @@ html{
     --intro-color: rgba(245, 245, 245, 0.7);
     --intro-text-color: #222;
     --dark-intro-text-color: black;
-    --dark-img: url(https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fjpoha21x1m8mr9xsz4y1.jpg);
-    /* --background-img: url(https://i.pinimg.com/736x/1a/79/a8/1a79a8e418d8321d1b7b8a8a0ebbe259.jpg); */
+    --dark-img: url("https://wallpapers.com/images/hd/seattle-hd-8587xqkg802bufrf.jpg");
     --background-img:var(--dark-img);
     --social-color: #333;
 }
@@ -395,9 +394,10 @@ header .container{
     flex-direction: column;
     padding: 10px;
     text-align: center;
-    height: 680px;
+    height: 650px;
     width: 100%;
     background-image:var(--background-img);
+    background-position:0;
     background-size:cover;
     background-repeat: no-repeat;
     border-radius: 12px;
