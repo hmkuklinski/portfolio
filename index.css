@@ -36,15 +36,16 @@ html{
     --second-color: #fff; /* the background color*/
     --title-color: #222;
     --subtitle-color: #000;
-    --dark-color-main: #6ba7cf;
-    --dark-color-second:#1e2835 ;
+    --dark-color-main: #547a94;
+    --dark-color-second:#05081b ;
     --dark-color-title: whitesmoke;
     --dark-subtitle-color: #333;
     --intro-color: rgba(245, 245, 245, 0.7);
     --intro-text-color: #222;
     --dark-intro-text-color: black;
-    --dark-img: url("https://wallpapers.com/images/hd/seattle-hd-8587xqkg802bufrf.jpg");
-    --background-img:var(--dark-img);
+    --light-img: url("https://wallpapers.com/images/hd/seattle-hd-8587xqkg802bufrf.jpg");
+    --dark-img: url("https://wallpapers.com/images/hd/seattle-at-night-33siq8c83dkjqfe0.jpg");
+    --background-img:var(--light-img);
     --social-color: #333;
 }
 input{
