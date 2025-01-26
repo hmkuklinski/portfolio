@@ -412,6 +412,9 @@ header .container{
     .pet-info{
         padding: 8px;
     }
+    #pet-title{
+        display:flex;
+    }
     
 }
 
@@ -964,4 +967,7 @@ proper alignment, spacing
 .pet-img img{
     height: 60px;
     width: 60px;
+}
+#pet-title{
+    display:none;
 }
