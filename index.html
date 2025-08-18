@@ -20,9 +20,9 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link active-link"><ion-icon name="home-outline"></ion-icon> Home</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="#about" class="nav-link"><ion-icon name="person-outline"></ion-icon> About</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a href="#projects-win" class="nav-link"><ion-icon name="folder-outline"></ion-icon> Projects</a>
                     </li>
@@ -50,8 +50,8 @@
                 <div class="intro-container container grid">
                     <div class="intro-content">
                         <h4>Hello! </h4>
-                        <h1>I'm
-                            <span class="typed" data-typed-items=" Hannah Kuklinski,a CS Major,a Frontend Dev,a Polyglot, a STAY, learning ThreeJs"></span>
+                        <h1>
+                            <span class="typed" id="typed-text" data-typed-items="I'm Hannah Kuklinski,I'm a Frontend Dev,I'm a UI designer,I'm a CS Major,I'm a Polyglot"></span>
                         </h1>
                         <p>My favorite language is JavaScript and I love making projects with React, Python, and Java.
                            <br> I’m interested in web development and currently looking for internships.    
@@ -118,6 +118,38 @@
                             </ul>
                         </div>
                     </div> 
+                    <div class="project-card" id ="flixy">
+                        <h3>Flixy</h3>
+                        <div class="project-preview">
+                            <img src="flixy.jpeg" alt="flixy">
+                        </div>
+                        <div class="project-text">
+                            <p>
+                                A media tracking web application that separates TV Shows, Podcasts, and Movies based on status (Completed, Queue, In Progress), genres, or ratings.
+
+                            </p>
+                        </div>
+                        <div class="project-btn">
+                            <div class="github">
+                                <a href="https://github.com/hmkuklinski/media-tracker/tree/main/project"> 
+                                    <img class="github-icon" src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" alt="github icon" height="80px" width="110px">
+                                </a>
+                            </div>
+                            <div class="other">
+                                <a class="btn-preview" href="https://flixy-media.vercel.app/">View Page</a>
+                            </div>
+                            
+                        </div>
+                        <div class="project-tags">
+                            <ul>
+                                <li>React</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div> 
+
                     <div class="project-card" id="spn"> 
                         <h3>SPN Lore</h3>
                         <div class="project-preview">
@@ -633,7 +665,7 @@ their recent accomplishments or announcements.
                 <h2 class="section_title">#30NitesOfCode</h2>
                 <div class="pet-container container grid">
                     <div class="pet-info-box">
-                        <div class="chick">
+                        <div class="all-pets">
                             <img src="https://camo.githubusercontent.com/f19c1dd4a116aa93ca0bb4d58f44504101ea5a7b4f56322447e67e0f9371f9ef/68747470733a2f2f7777772e636f64656465782e696f2f696d616765732f636f64652d6e69676874732f636f6d706c6574696f6e2e676966" alt="chick">
                         </div>
                     </div>
@@ -644,7 +676,10 @@ their recent accomplishments or announcements.
                         The user is required to make a post either in the OPC or on Twitter to track their progress. 
                     </div>
                 </div>
-                <h2 class="section_title" id="pet-title">My Pets</h2>
+                <!-- <h2 class="section_title" id="pet-title">My Pets</h2> -->
+                <div className="click-pet" id="click-pet">
+                    <h3>Click the pet's name to view my progress! </h3>
+                </div>
                 <div class="main-pet-container container grid">
                     <div class="pet-box">
                         <div class="pet-info">
@@ -688,14 +723,14 @@ their recent accomplishments or announcements.
                     </div>  
                     <div class="pet-box">
                         <div class="pet-info">
-                            <h2><a href="">Butcher</a></h2>
+                            <h2><a href="https://www.codedex.io/@Hannah/30-nites-of-code?pet=tcMpc2bBPz5oGnwZFJtq">Butcher</a></h2>
                         </div>
                         <div class="pet-img">
                             <img src="https://www.codedex.io/images/code-nights/baby-happy-dragon.gif" alt="pet">
                         </div>
                     </div> 
                 </div>
-
+                
             </section>
             <section class="clubs section"  id="club">
                 <h2 class="section_title">Clubs</h2>
@@ -718,11 +753,21 @@ their recent accomplishments or announcements.
                     </div>
                     <div class="club-box">
                         <div class="daehwa">
-                          <h3>Daehwa: Korean Conversation club</h3>
+                          <h3>대화 동아리</h3>
+
+
                         </div>
                         <div class="picture">
                            <img src="https://se-images.campuslabs.com/clink/images/1fba770b-1870-4bfe-b2a0-40dc5bd6fe2727425fff-3559-4c5b-be9d-99ff3e926afd.png?preset=med-sq" alt="daehwa picture" width="200px" height="200px">
                         </div>
+                    </div>
+                    <div class="club-box">
+                        <div class="gains">
+                          <h3>Pitt's Girl Gains Lifting Club</h3>
+                        </div>
+                        <div class="picture">
+                          <img src="girl-gains.jpg" width="180px" height="180px" alt ="girl gains">
+                        </div> 
                     </div>
                 </div>
             </section>
@@ -780,7 +825,7 @@ their recent accomplishments or announcements.
                             Codédex
                         </div>
                     </a>
-                    <a href="https://www.instagram.com/hkuklinski/">
+                    <a href="https://www.instagram.com/hmkukweb/">
                         <div class="contact-box" >
                             <img src="https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338393_640.png" alt="instagram">
                             Instagram

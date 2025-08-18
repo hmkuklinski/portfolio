@@ -43,7 +43,8 @@ html{
     --intro-color: rgba(245, 245, 245, 0.7);
     --intro-text-color: #222;
     --dark-intro-text-color: black;
-    --light-img: url("https://wallpapers.com/images/hd/seattle-hd-8587xqkg802bufrf.jpg");
+    
+    --light-img: url("./me.jpeg");
     --dark-img: url("https://wallpapers.com/images/hd/seattle-hd-8587xqkg802bufrf.jpg");
     /*
         seattle-night: "https://wallpapers.com/images/hd/seattle-at-night-33siq8c83dkjqfe0.jpg"
@@ -52,6 +53,7 @@ html{
     */
     --background-img:var(--light-img);
     --social-color: #333;
+    --github-projects: invert(0%);
 }
 input{
     background-color:whitesmoke;
@@ -64,6 +66,7 @@ input{
     --intro-text-color: var(--dark-intro-text-color);
     --background-img: var(--dark-img);
     --social-color: var(--second-color);
+    --github-projects: invert(100%);
 }
 
 body{
@@ -87,7 +90,7 @@ ul {
 }
 
 .section{
-    padding: 90px 0 0;
+    padding: 60px 0 0;
 }
 
 .container{
@@ -325,15 +328,9 @@ header .container{
     .close-icon{
         display:block;
     }
-    
-    .intro-content h4{
-        font-size:16px;
-    }
-    .intro-content h1{
-        font-size:32px;
-    }
-    .intro-content p{
-        font-size:15px;
+
+    #typed-text{
+        font-size:25px;
     }
 
     .intro-container{
@@ -391,14 +388,11 @@ header .container{
         gap: 1rem;
         width: 100%;
     }
-    .favorites{
+    .favorites, .fave{
         display:none;
     }
     .favorite-box{
         width: 95%;
-    }
-    .fave{
-        display:none;
     }
     .pet-container{
         display: flex;
@@ -408,6 +402,7 @@ header .container{
         padding: 8px;
         margin: 5px;
         height: 600px;
+        width:90%;
     }
     .pet-info{
         padding: 8px;
@@ -415,7 +410,18 @@ header .container{
     #pet-title{
         display:flex;
     }
+    .main-pet-container{
+        width: 100%;
+        display:grid !important;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        height:auto;
+    }
     
+   
+
+        
 }
 
 /*first section formatting*/
@@ -429,9 +435,9 @@ header .container{
     position:relative;
     max-width: 97%;
     max-height: 310px;
-    top: 180px;
-    font: 29px Helvetica;
-    padding: 15px;
+    top: 220px;
+    font: 27px Helvetica;
+    padding: 10px;
     background-color: var(--intro-color);
     border-radius: 12px;
     margin: 10px 5px;
@@ -444,7 +450,7 @@ header .container{
     flex-direction: column;
     padding: 10px;
     text-align: center;
-    height: 650px;
+    height: 720px;
     width: 100%;
     background-image:var(--background-img);
     background-position:0;
@@ -691,11 +697,11 @@ proper alignment, spacing
     align-items: flex-start;
     justify-content:center;
     flex-wrap:wrap;
-    margin: 15px 40px;
+    margin: 15px 20px;
 }
 
 .project-card{
-    margin: 30px;
+    margin: 20px;
     border-radius: 10px;
     padding: 15px;
     border:1px solid var(--main-color);
@@ -733,6 +739,8 @@ proper alignment, spacing
 .github-icon{
     width: 70px;
     height: 50px;
+    filter: var(--github-projects);
+    background-color: transparent;
 }
 .project-tags{
     position: relative;
@@ -865,10 +873,10 @@ proper alignment, spacing
 
 .club-box {
     margin: 15px;
-    width: 260px;
+    width: 200px;
     border-radius: 10px;
     padding: 15px;
-    height: 230px;
+    height: 300px;
     text-align:center;
     font-size: 16px;
 }
@@ -952,7 +960,7 @@ proper alignment, spacing
    display:flex;
    align-items: center;
    justify-content:center;
-   flex-wrap:wrap;
+   margin-top: 28px;
 }
 .pet-box{
     display:flex;
@@ -960,9 +968,9 @@ proper alignment, spacing
     justify-content: center;
     flex-direction: column;
     margin: 15px 6px;
-    flex: 1;
-    width: 40%;
+    width: 100%;
     text-align: center;
+    cursor:pointer;
 }
 .pet-img img{
     height: 60px;
@@ -970,4 +978,18 @@ proper alignment, spacing
 }
 #pet-title{
     display:none;
+}
+#click-pet{
+    margin-top: 50px;
+}
+#click-pet h3{
+    color:var(--main-color);
+    text-align: center;
+}
+.all-pets img{
+    width: 95%;
+}
+
+.pet-info h2{
+    font-size: 18px;
 }
