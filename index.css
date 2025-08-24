@@ -44,8 +44,9 @@ html{
     --intro-text-color: #222;
     --dark-intro-text-color: black;
     
-    --light-img: url("./me.jpeg");
-    --dark-img: url("./me.jpeg");
+    --light-img: url("./pittDay.jpg");
+    --dark-img: url("./pittNight.jpg");
+    --mobile-img: url("./pittMobile.jpg");
     /*
         seattle-night: "https://wallpapers.com/images/hd/seattle-at-night-33siq8c83dkjqfe0.jpg"
         seattle-day: "https://wallpapers.com/images/hd/seattle-hd-8587xqkg802bufrf.jpg"
@@ -291,6 +292,13 @@ header .container{
 }
 
 @media screen and (max-width:750px){
+    :root {
+        --background-img: var(--mobile-img);
+    }
+    .dark-theme{
+        --background-img: var(--mobile-img);
+    }
+    
     /* ------ for navbar content ------*/
     .container { 
         padding: 0 30px;
@@ -453,7 +461,7 @@ header .container{
     height: 720px;
     width: 100%;
     background-image:var(--background-img);
-    background-position:0;
+    background-position:left;
     background-size:cover;
     background-repeat: no-repeat;
     border-radius: 12px;
@@ -513,7 +521,8 @@ section{
 }
 .intro-social ion-icon{
     background-color: transparent;
-    color: var(--main-color);
+    /* color: var(--main-color); */
+    color: rgb(170, 137, 26);
 }
 .contact{
     background-color: transparent;
@@ -715,6 +724,9 @@ proper alignment, spacing
     font-size: 22px;
     color: var(--main-color);
 }
+.club-box h3{
+    height: 100px;
+}
 
 .project-preview img, .picture img{
     width: 90%;
@@ -737,7 +749,7 @@ proper alignment, spacing
     margin: 10px 5px;
 }
 .github-icon{
-    width: 70px;
+    width: auto;
     height: 50px;
     filter: var(--github-projects);
     background-color: transparent;
@@ -857,7 +869,7 @@ proper alignment, spacing
 }
 #contact{
     align-items: center;
-    margin: 40px 10px;
+    margin: 40px 10px 80px 10px;
 }
 .clubs-container, .contact-container{
     display:flex;
@@ -869,6 +881,7 @@ proper alignment, spacing
 .contact-container{
     max-width: 95%;
     flex-direction: row;
+    margin-bottom: 65px;
 }
 
 .club-box {
@@ -879,6 +892,10 @@ proper alignment, spacing
     height: 300px;
     text-align:center;
     font-size: 16px;
+}
+.club-box:hover h3{
+    color: rgb(214, 180, 30);
+    transition: 0.4s ease-in all;
 }
 .contact-box{
     width: 130px;
@@ -972,6 +989,11 @@ proper alignment, spacing
     text-align: center;
     cursor:pointer;
 }
+.pet-box:hover h2{
+   color: var(--main-color);
+   transition: 0.4s ease-in all;
+}
+
 .pet-img img{
     height: 60px;
     width: 60px;

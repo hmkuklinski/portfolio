@@ -121,7 +121,9 @@ document.addEventListener("DOMContentLoaded", function (){
             'REACT': 'React',
             'GEOPANDAS': 'GeoPandas',
             'PANDAS': 'Pandas',
-            'JAVA': 'Java'
+            'JAVA': 'Java',
+            'PYTHON': "Python",
+            
         };
     
         // Check if the entered value exists in the displayMap
