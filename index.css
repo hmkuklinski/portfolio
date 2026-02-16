@@ -133,6 +133,7 @@ ul {
 
 .btn-preview{
     color:var(--title-color);
+    margin: 10px;
 }
 
 .btn:hover, .btn-preview:hover, .btn-contact:hover, .btn-fave:hover{
