@@ -1016,3 +1016,219 @@ proper alignment, spacing
 .pet-info h2{
     font-size: 18px;
 }
+
+/* For the experience section*/
+
+/* Horizontal Experience Timeline */
+#experience-win {
+    padding: 4rem 2rem;
+    overflow: hidden;
+}
+
+#experience-win .section_title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Timeline container */
+#experience-win {
+    --timeline-color: var(--first-color);
+}
+#experience-win .experience-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#experience-win .experience-card {
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 2rem 1.5rem;
+    background: var(--container-color);
+    border-radius: 12px;
+    border-top: 3px solid var(--first-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor:pointer;
+}
+
+#experience-win .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Timeline layout */
+#experience-win .experience-timeline {
+    display: flex;
+    position: relative;
+    gap: 2rem;
+    padding-top: 2.5rem;
+    width: 95%;
+}
+
+/* Horizontal connecting line */
+#experience-win .experience-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--timeline-color);
+}
+
+#experience-win .experience-text{
+    border-top: 1px solid var(--main-color);
+    padding-top: 1rem;
+}
+
+/* Timeline markers */
+#experience-win .experience-card::before {
+    content: "";
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--first-color);
+    border: 4px solid var(--body-color);
+    z-index: 1;
+}
+
+/* Connector between marker and card */
+#experience-win .experience-card::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 25px;
+    background: var(--timeline-color);
+}
+
+/* Experience headings */
+#experience-win .experience-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+#experience-win .experience-card h4 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: var(--text-color);
+}
+
+/* Experience images */
+#experience-win .experience-preview {
+    margin: 1.25rem 0;
+    display: flex;
+    align-items: center;
+    min-height: 65px;
+}
+
+#experience-win .experience-preview img {
+    max-width: 120px;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+/* Description */
+#experience-win .experience-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+    #experience-win .experience-timeline {
+        gap: 1rem;
+    }
+
+    #experience-win .experience-card {
+        padding: 1.5rem 1rem;
+    }
+    #projects-win .projects-container{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width: 95%;
+    }
+}
+@media screen and (min-width: 650px) and (max-width: 900px) {
+    #experience-win .experience-card {
+        height: 380px;
+    }
+    #experience-win .experience-top{
+        height: 180px;
+        text-align: center;
+    }
+    #experience-win .experience-company{
+        margin-top: 10px;
+    }
+    #experience-win .experience-date{
+        display:none;
+    }
+    #experience-win .experience-date-mobile{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+    }
+    #experience-win .experience-text{
+        height: 200px;
+    }
+    #experience-win .experience-preview{
+        display:none;
+    }
+}
+
+/* Mobile: vertical layout */
+@media screen and (max-width: 650px) {
+    #experience-win {
+        padding: 0rem;
+        gap: 0rem;
+    }
+    #experience-win .experience-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding:0 0 0;
+        overflow: visible;
+        width: 100%;
+    }
+
+    #experience-win .experience-card {
+        flex: none;
+        width: 100%;
+    }
+
+    #experience-win .experience-timeline::before {
+        display: none;
+    }
+
+    #experience-win .experience-card::before,
+    #experience-win .experience-card::after {
+        display: none;
+    }
+    #experience-win .experience-content h3{
+        font-size: 0.9rem;
+        color:var(--main-color);
+    }
+    #experience-win .experience-content h4{
+        font-size: 0.8rem;
+    }
+    #experience-win .experience-top, #experience-win .experience-text{
+        padding: 10px;
+    }
+}
+
